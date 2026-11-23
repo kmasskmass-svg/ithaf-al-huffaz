@@ -10,7 +10,7 @@
 <meta property="og:image" content="https://kmasskmass-svg.github.io/ithaf-al-huffaz/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0B5D4B">
-<link rel="manifest" href="manifest.json?v=2"><link rel="icon" href="icon-192.png?v=2"><link rel="apple-touch-icon" href="apple-touch-icon.png?v=2"><meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="manifest" href="app.webmanifest"><link rel="icon" href="app-icon-192.png"><link rel="apple-touch-icon" href="app-icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes">
 <style>
 @font-face{font-family:AmiriQ;src:url(fonts/AmiriQuran.ttf);font-display:swap}
 @font-face{font-family:AmiriW;src:url(fonts/Amiri-Regular.ttf);font-display:swap}
@@ -117,6 +117,10 @@ footer{text-align:center;color:#888;font-size:14px;padding:16px}
 #ab .cb a{text-decoration:none}
 #ab .wa{background:#1F8A4C;border-color:#1F8A4C;color:#fff}
 html.dark #ab .cta{background:#1f2a20}html.dark #ab .src{color:#aaa}
+#up{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:30;background:var(--g);color:#fff;border:2px solid var(--gold);border-radius:14px;padding:10px 16px;width:min(560px,92vw);box-shadow:0 6px 24px #0006;font-size:17px}
+#up b{color:#FFF3C9}#up ul{margin:4px 0;padding-right:20px}#up .row{display:flex;gap:8px;justify-content:center;margin-top:6px}
+#up .btn{background:#fff;color:var(--g)}#up .btn.p{background:var(--gold);border-color:var(--gold);color:#fff}
+#set .ub{font:inherit;font-size:15px;border-radius:8px;border:1px solid #E9D9A8;background:none;color:#fff;cursor:pointer;padding:0 10px}
 #sm{position:fixed;inset:0;background:#000a;z-index:20;display:flex;align-items:center;justify-content:center;padding:12px}
 #sm .box{background:var(--card);border-radius:14px;max-width:520px;width:100%;max-height:96vh;overflow:auto;padding:12px 14px;text-align:center}
 #sm img{width:100%;border-radius:8px;border:1px solid var(--line);background:#eee;min-height:120px}
@@ -138,7 +142,7 @@ html.dark .sh{background:#0B5D4B}
 @media(max-width:600px){.top{gap:6px}.top a,.gear{font-size:14px;padding:1px 7px}.top h1{font-size:18px}.head,.q{font-size:20px}body{font-size:17px}.tabs{gap:3px}.tabs button{font-size:14px;padding:5px 1px;white-space:nowrap}#ab .abh h2{font-size:23px}#ab .abb{padding:4px 14px 16px;font-size:17px}.ch{flex-wrap:wrap}}
 </style></head><body>
 <header><div class="top"><h1>إتحاف الحُفّاظ بمتشابه الألفاظ</h1><a href="./">الكتب PDF</a><button class="gear" id="abb" title="عن التطبيق وميزاته">عن التطبيق</button><button class="gear" id="gb" title="الإعدادات">⚙</button></div>
-<div id="set" hidden><span>حجم الخط <button class="zb" id="z1">−</button> <button class="zb" id="z2">+</button></span><label><input type="checkbox" id="dk"> الوضع الليلي</label><label>القارئ <select id="rc"></select></label></div>
+<div id="set" hidden><span>حجم الخط <button class="zb" id="z1">−</button> <button class="zb" id="z2">+</button></span><label><input type="checkbox" id="dk"> الوضع الليلي</label><label>القارئ <select id="rc"></select></label><button class="ub" id="ubn" title="إن ظهر لك شيء قديم">تحديث التطبيق الآن</button></div>
 <div class="tabs"><button data-m="s" class="on">بالسورة</button><button data-m="v">بالآية</button><button data-m="q">بالنص</button><button data-m="z">اختبر حفظك</button><button data-m="f">المفضلة</button></div></header>
 <main><div id="load">جارٍ تحميل البيانات…</div><div id="app" hidden>
 <div class="ctl" id="cs"><label>السورة</label><select id="ss"></select>
@@ -175,6 +179,7 @@ html.dark .sh{background:#0B5D4B}
 <li><b>اختبر حفظك:</b> أسئلة من نوعين: «في أي موضع وردت الآية بهذا اللفظ؟» و«أكمل الكلمة»، على القرآن كله أو على حزب أو سورة، مع النتيجة وطريقة الضبط بعد كل جواب.</li>
 <li><b>متشابه اليوم:</b> مجموعة جديدة كل يوم في أعلى تبويب السورة، تصلح للمراجعة اليومية وللإرسال في مجموعات التحفيظ.</li>
 <li><b>الإعدادات ⚙:</b> تكبير الخط وتصغيره، والوضع الليلي، واختيار القارئ.</li>
+<li><b>يتحدث تلقائيًّا:</b> كلما صدرت نسخة جديدة وصلتك وحدها عند فتح التطبيق مع الاتصال بالإنترنت، وتظهر لك رسالة بما أُضيف. وإن رأيت شيئًا قديمًا فاضغط ⚙ ثم «تحديث التطبيق الآن».</li>
 <li><b>يعمل بلا إنترنت:</b> من قائمة المتصفح في الجوال اختر «إضافة إلى الشاشة الرئيسية» فيصير تطبيقًا يعمل دون اتصال، وكل جزء من الكتاب تفتحه مرة يبقى محفوظًا.</li>
 </ul>
 <h3>كيف تستفيد منه</h3>
@@ -194,6 +199,7 @@ html.dark .sh{background:#0B5D4B}
 </div>
 <p class="src" style="text-align:center;margin-top:14px">نسأل الله أن ينفع به، وأن يجعله خالصًا لوجهه الكريم.</p>
 </div></div></div>
+<div id="up" hidden></div>
 <div id="sm" hidden><div class="box"><img id="smi" alt="البطاقة"><div class="row"><label class="ex"><input type="checkbox" id="smt" checked>طريقة الضبط</label><label class="ex"><input type="checkbox" id="smw">التوجيه</label></div><div class="row"><button class="btn p" id="sms">مشاركة</button><button class="btn" id="smd">تحميل الصورة</button><button class="btn" id="smc">إغلاق</button></div></div></div>
 <footer>إعداد: كليب بن أحمد بن ضيف الله الزهراني · المصادر: درة التنزيل للإسكافي، البرهان للكرماني، ملاك التأويل لابن الزبير</footer>
 <script>
@@ -460,7 +466,7 @@ function initExtra(){
   $('rc').innerHTML=RC.map(([v,n])=>`<option value="${v}">${n}</option>`).join('');$('rc').value=ST.get('rc',RC[0][0]);$('rc').onchange=()=>ST.set('rc',$('rc').value);
   $('dk').checked=ST.get('dark',false);$('dk').onchange=()=>{ST.set('dark',$('dk').checked);applySet()};
   const zz=d=>{ST.set('z',Math.round(Math.max(.8,Math.min(1.6,ST.get('z',1)+d))*10)/10);applySet()};$('z1').onclick=()=>zz(-.1);$('z2').onclick=()=>zz(.1);
-  $('gb').onclick=()=>{$('set').hidden=!$('set').hidden};
+  $('gb').onclick=()=>{$('set').hidden=!$('set').hidden};$('ubn').onclick=hardUpdate;
   const abO=()=>{$('ab').hidden=false;$('ab').scrollTop=0},abC=()=>{$('ab').hidden=true;if(location.hash=='#about')history.replaceState(null,'',location.pathname)};
   $('abb').onclick=abO;$('abx').onclick=abC;$('ab').onclick=e=>{if(e.target.id=='ab')abC()};document.addEventListener('keydown',e=>{if(e.key=='Escape'){abC();$('sm').hidden=true}});if(location.hash=='#about')abO();
   $('zs').innerHTML='<option value="0">القرآن كله</option>'+HZ.map((h,i)=>`<option value="h${i+1}">الحزب ${h} (${D.names[PARTS[i][0]-1]} – ${D.names[PARTS[i][1]-1]})</option>`).join('')+D.names.map((n,i)=>`<option value="${i+1}">سورة ${n}</option>`).join('');
@@ -469,7 +475,23 @@ function initExtra(){
   $('smc').onclick=()=>{$('sm').hidden=true};$('sm').onclick=e=>{if(e.target.id=='sm')$('sm').hidden=true};
   showDaily();}
 applySet();
-if('serviceWorker' in navigator&&isSecureContext)navigator.serviceWorker.register('sw.js').catch(()=>{});
+/* ===== التحديث التلقائي ===== */
+const BUILD='2026-11-23.2'; // يطابق v في version.json
+async function hardUpdate(){try{const ks=await caches.keys();await Promise.all(ks.filter(k=>k!='ithaf-books').map(k=>caches.delete(k)));
+  const r=await navigator.serviceWorker?.getRegistration();if(r)await r.update();}catch(e){}
+  location.replace(location.pathname+'?u='+Date.now()+location.hash);}
+function upMsg(h){$('up').innerHTML=h;$('up').hidden=false;}
+async function checkVer(){let j;try{j=await (await fetch('version.json?t='+Date.now(),{cache:'no-store'})).json()}catch(e){return}
+  if(location.search.includes('u='))history.replaceState(null,'',location.pathname+location.hash);
+  if(j.v>BUILD){ // الصفحة المفتوحة أقدم من المنشور: حدّث مرة واحدة لكل نسخة
+    if(ST.get('triedFor','')!=j.v){ST.set('triedFor',j.v);return hardUpdate();}
+    return upMsg(`<b>صدرت نسخة جديدة من التطبيق.</b><div class="row"><button class="btn p" onclick="hardUpdate()">حدّث الآن</button><button class="btn" onclick="$('up').hidden=true">لاحقًا</button></div>`);}
+  const seen=ST.get('ver','');ST.set('ver',j.v);
+  if(seen&&seen!=j.v&&j.notes&&j.notes.length)upMsg(`<b>✦ تم تحديث التطبيق، والجديد فيه:</b><ul>${j.notes.map(n=>`<li>${esc(n)}</li>`).join('')}</ul><div class="row"><button class="btn p" onclick="$('up').hidden=true">حسنًا</button></div>`);}
+if('serviceWorker' in navigator&&isSecureContext){navigator.serviceWorker.register('sw.js').then(r=>{
+  setInterval(()=>{if(document.visibilityState=='visible')r.update().catch(()=>{})},30*60e3);}).catch(()=>{});}
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState=='visible')checkVer()});
+checkVer();
 fetch('data.json').then(r=>r.json()).then(d=>{D=d;
   const opts=D.names.map((n,i)=>`<option value="${i+1}">${ar(i+1)}. ${n}</option>`).join('');$('ss').innerHTML=opts;$('vs').innerHTML=opts;
   NG=D.g.map(g=>loose(g.p.map(p=>p[2]).join(' | ')));

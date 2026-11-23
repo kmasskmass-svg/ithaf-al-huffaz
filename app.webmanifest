@@ -1,0 +1,17 @@
+{
+  "name": "إتحاف الحُفّاظ بمتشابه الألفاظ",
+  "short_name": "إتحاف الحفاظ",
+  "description": "المتشابه اللفظي في القرآن الكريم مع توجيهه وطريقة تمييزه",
+  "lang": "ar",
+  "dir": "rtl",
+  "id": "./app.html",
+  "start_url": "./app.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FAF6EA",
+  "theme_color": "#0B5D4B",
+  "icons": [
+    {"src": "app-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}

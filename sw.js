@@ -1,7 +1,7 @@
-// يحفظ التطبيق في الجهاز ليعمل دون اتصال. غيّر رقم النسخة عند كل تحديث للملفات.
-const V = 'ithaf-v3';
-const CORE = ['./', './index.html', './app.html', './data.json', './manifest.json', './og-image.jpg',
-  './icon-192.png', './icon-512.png', './fonts/AmiriQuran.ttf', './fonts/Amiri-Regular.ttf', './fonts/Amiri-Bold.ttf'];
+// يحفظ التطبيق في الجهاز ليعمل دون اتصال. يأخذ من الشبكة أولًا، فيصل كل تحديث وحده.
+const V = 'ithaf-v4';
+const CORE = ['./', './index.html', './app.html', './data.json', './app.webmanifest', './version.json', './og-image.jpg',
+  './app-icon-192.png', './app-icon-512.png', './app-icon-180.png', './fonts/AmiriQuran.ttf', './fonts/Amiri-Regular.ttf', './fonts/Amiri-Bold.ttf'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(V).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
 });
@@ -24,7 +24,7 @@ self.addEventListener('fetch', e => {
     return;
   }
   // بقية الملفات: الشبكة أولًا ليصل كل تحديث، والمحفوظ عند انقطاعها
-  e.respondWith(fetch(e.request).then(r => {
+  e.respondWith(fetch(new Request(e.request.url, {cache: 'no-cache', credentials: 'same-origin'})).then(r => {
     if (r.ok) { const cp = r.clone(); caches.open(V).then(c => c.put(e.request, cp)); }
     return r;
   }).catch(() => caches.match(e.request, {ignoreSearch: true}).then(r => r || caches.match('./app.html'))));
