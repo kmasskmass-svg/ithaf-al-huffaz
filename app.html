@@ -16,7 +16,7 @@
 @font-face{font-family:AmiriW;src:url(fonts/Amiri-Regular.ttf);font-display:swap}
 @font-face{font-family:AmiriW;src:url(fonts/Amiri-Bold.ttf);font-weight:bold;font-display:swap}
 :root{--g:#0B5D4B;--g2:#08473a;--gold:#B08D3C;--line:#E2D7B5;--card:#FFFDF6;--bg:#FAF6EA;--blue:#1F4E8C;--red:#B3261E}
-*{box-sizing:border-box}[hidden]{display:none!important}
+*{box-sizing:border-box}html{scroll-behavior:auto}[hidden]{display:none!important}
 body{margin:0;background:var(--bg);font-family:AmiriW,'Traditional Arabic',serif;font-size:18px;color:#222;line-height:1.7}
 header{background:var(--g);color:#fff;padding:12px 16px 10px;border-bottom:4px double var(--gold);position:sticky;top:0;z-index:5}
 .top{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto}
@@ -126,7 +126,7 @@ html.dark #ab .cta{background:#1f2a20}html.dark #ab .src{color:#aaa}
 #kv .kh .ref{font-size:15px;color:#555;border-top:1px dashed var(--line);padding-top:6px;margin-top:6px}
 #kv .tocd{margin-top:6px}#kv .tocd summary{color:var(--g)}
 #kv .toc{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
-#kv .sl{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+#kv .sl{scroll-margin-top:110px;background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden}
 #kv .sl .st{display:flex;justify-content:space-between;gap:8px;align-items:center;background:#F3ECD6;padding:4px 14px;color:var(--g);font-weight:bold}
 #kv .sl .st span{color:var(--gold);font-weight:normal;font-size:15px;white-space:nowrap}
 #kv .sl img{display:block;width:100%;aspect-ratio:16/9;cursor:zoom-in;background:#fff}
@@ -149,6 +149,61 @@ html.dark #ab .cta{background:#1f2a20}html.dark #ab .src{color:#aaa}
 #tv .pgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px;margin-top:10px}
 #tv .pgs img{width:100%;border:1px solid var(--line);border-radius:8px;cursor:zoom-in;background:#FFF6DF;aspect-ratio:1000/1209}
 html.dark #tv .ru h3{background:#1f302a}html.dark #tv .idx a{background:#0f1915}html.dark #tv .ref,html.dark #tv .ru .eg>span{color:#aaa}
+#home .mi{display:flex;align-items:center;gap:14px;width:100%;text-align:right;font:inherit;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin-bottom:8px;cursor:pointer;color:inherit}
+#home .mi:hover{border-color:var(--gold);box-shadow:0 2px 10px #0001}
+#home .mi .ico{flex:0 0 46px;height:46px;border-radius:12px;background:var(--g);color:#FFF3C9;display:flex;align-items:center;justify-content:center;font-size:24px}
+#home .mi b{display:block;color:var(--g);font-size:20px}
+#home .mi span.d{display:block;color:#666;font-size:15px;line-height:1.5}
+#home .mi.new .ico{background:var(--gold)}
+#home .mi .tag{font-size:12px;background:var(--gold);color:#fff;border-radius:10px;padding:0 8px;margin-right:6px;vertical-align:middle}
+#home h2{color:var(--g);font-size:19px;margin:16px 4px 8px}
+#fab{position:fixed;bottom:16px;left:16px;z-index:15;background:var(--g);color:#FFF3C9;border:2px solid var(--gold);border-radius:30px;font:inherit;font-size:17px;padding:6px 16px;box-shadow:0 4px 14px #0004;cursor:pointer}
+#cur{color:#FFF3C9;font-size:17px;max-width:1100px;margin:4px auto 0;opacity:.95}
+#cur:empty{display:none}
+.igw{padding:6px 14px 8px;border-top:1px dashed var(--line);background:#FFFBEF;font-size:16px}
+.igw .r{margin:2px 0}.igw b{color:#7a5f20}
+.mc{display:inline-block;font-size:14px;border:1px solid var(--gold);color:#7a5f20;border-radius:12px;padding:0 9px;margin:1px 2px;background:#fff}
+.bI{background:#8A6D1F}
+.igc .q{font-size:21px}
+.igh{color:#7a5f20;font-weight:bold;margin:14px 2px 8px;font-size:18px}
+#iv .kh{background:var(--card);border:1.5px solid var(--gold);border-radius:14px;padding:12px 16px;margin-bottom:12px}
+#iv .kh h2{margin:0;color:var(--g);font-size:24px}#iv .kh .by{color:#7a5f20;margin:2px 0 6px}
+#iv .ref{font-size:15px;color:#555;border-top:1px dashed var(--line);padding-top:6px;margin-top:8px}
+html.dark .igw{background:#1b2620}html.dark .mc{background:#0f1915}html.dark #home .mi span.d,html.dark #iv .ref{color:#aaa}
+#mv{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 16px 18px;margin-bottom:12px}
+.msh{text-align:center;font-family:AmiriW;font-weight:bold;font-size:24px;color:var(--g);border:2px solid var(--gold);border-radius:30px;margin:6px auto 4px;max-width:340px;background:#FFF7DF}
+.mbs{text-align:center;font-family:AmiriQ;font-size:25px;color:var(--g);margin:6px 0}
+.mt{font-family:AmiriQ;font-size:25px;line-height:2.45;text-align:justify}
+.mt .an{display:inline-block;min-width:1.6em;text-align:center;color:var(--gold);font-family:AmiriW;font-size:16px;border:1.5px solid var(--gold);border-radius:50%;line-height:1.55;padding:0 3px;margin:0 2px;vertical-align:middle}
+.mt .an.ax{background:var(--gold);color:#fff}
+.ma.hv{cursor:pointer}.ma.hv:hover{background:#0B5D4B0d}
+.ma.fl{background:#FFE9A8;border-radius:6px}
+.u{text-decoration:underline;text-underline-offset:9px;text-decoration-thickness:2px}
+.u1{text-decoration-color:var(--g)}.u2{text-decoration-color:#C9A13B;text-decoration-style:dashed}.u3{text-decoration-color:var(--g);text-decoration-style:double;text-decoration-thickness:3px}
+.lg{font-size:15px;color:#555;border-bottom:1px dashed var(--line);padding-bottom:6px;margin-bottom:4px}.lg .u{text-underline-offset:5px}html.dark .lg{color:#aaa}
+#pop{position:fixed;left:0;right:0;bottom:0;z-index:22;background:var(--card);border-top:3px double var(--gold);border-radius:18px 18px 0 0;box-shadow:0 -6px 24px #0004;max-height:70vh;overflow:auto;padding:8px 16px 14px;max-width:820px;margin:0 auto}
+#pop .pph{display:flex;justify-content:space-between;align-items:center;color:var(--g);font-size:20px;position:sticky;top:-8px;background:var(--card);padding:4px 0}
+#pop .ppi{border-bottom:1px dashed var(--line);padding:6px 0}
+#pop .pps .ic{margin:2px 0}
+#pop .ppf{text-align:center;margin-top:8px}
+html.dark .msh{background:#1f2a20}
+#pv{position:fixed;inset:0;z-index:26;background:#2b2b2b;display:flex;flex-direction:column}
+#pv .pvh{display:flex;gap:6px;align-items:center;flex-wrap:wrap;background:var(--g);color:#FFF3C9;padding:6px 10px;border-bottom:3px double var(--gold)}
+#pv .pvh b{flex:1;min-width:140px;font-size:17px}
+#pv .pvh .btn{background:#fff;padding:1px 10px}#pv .pvh span{font-size:15px}
+#pvb{flex:1;overflow:auto;padding:10px;--pz:1}
+#pvb .pg{position:relative;width:calc(min(900px,100%) * var(--pz));margin:0 auto 10px;background:#fff;box-shadow:0 2px 10px #0006}
+#pvb .pg canvas{width:100%;height:100%;display:block}
+#pvb .pgn{position:absolute;top:40%;left:0;right:0;text-align:center;color:#bbb;font-size:30px}
+#pvb .pg canvas+.pgn{display:none}
+#nv .kh{background:var(--card);border:1.5px solid var(--gold);border-radius:14px;padding:12px 16px;margin-bottom:12px}
+#nv .kh h2{margin:0;color:var(--g);font-size:24px}#nv .by{color:#7a5f20;margin:2px 0 6px}
+#nv .ref{font-size:15px;color:#555;border-top:1px dashed var(--line);padding-top:6px;margin-top:8px}
+#nv .ru{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+#nv .ru h3{margin:0;display:flex;gap:10px;align-items:center;background:#F3ECD6;padding:6px 14px;color:var(--g);font-size:20px}
+#nv .ru .bd{padding:8px 16px 12px}#nv .mzs{color:var(--g);font-weight:bold}
+.mzr{padding:6px 14px 8px;border-top:1px dashed var(--line);font-size:16px}.mzr b{color:#7a5f20}
+html.dark #nv .ru h3{background:#1f302a}html.dark #nv .ref{color:#aaa}
 #lb{position:fixed;inset:0;background:#000e;z-index:25;display:flex;flex-direction:column}
 #lb .lbw{flex:1;overflow:auto;display:flex;align-items:center;justify-content:center;touch-action:pan-x pan-y pinch-zoom}
 #lb img{max-width:100%;max-height:100%;background:#fff}
@@ -179,19 +234,19 @@ html.dark .sh{background:#0B5D4B}
 </style></head><body>
 <header><div class="top"><h1>إتحاف الحُفّاظ بمتشابه الألفاظ</h1><a href="./">الكتب PDF</a><button class="gear" id="abb" title="عن التطبيق وميزاته">عن التطبيق</button><button class="gear" id="gb" title="الإعدادات">⚙</button></div>
 <div id="set" hidden><span>حجم الخط <button class="zb" id="z1">−</button> <button class="zb" id="z2">+</button></span><label><input type="checkbox" id="dk"> الوضع الليلي</label><label>القارئ <select id="rc"></select></label><button class="ub" id="ubn" title="إن ظهر لك شيء قديم">تحديث التطبيق الآن</button></div>
-<div class="tabs"><button data-m="s" class="on">بالسورة</button><button data-m="v">بالآية</button><button data-m="q">بالنص</button><button data-m="z">اختبر حفظك</button><button data-m="f">المفضلة</button><button data-m="k">مهارات الضبط</button><button data-m="t">الضبط بالتقعيد</button></div></header>
+<div id="cur"></div><div class="tabs" hidden><button data-m="s" class="on">بالسورة</button><button data-m="v">بالآية</button><button data-m="q">بالنص</button><button data-m="z">اختبر حفظك</button><button data-m="f">المفضلة</button><button data-m="k">مهارات الضبط</button><button data-m="t">الضبط بالتقعيد</button><button data-m="i">إغاثة اللهفان</button></div></header>
 <main><div id="load">جارٍ تحميل البيانات…</div><div id="app" hidden>
 <div class="ctl" id="cs"><label>السورة</label><select id="ss"></select>
-<div class="chips" id="fl"><button class="chip on" data-t="">الكل</button><button class="chip" data-t="A">آيات متطابقة</button><button class="chip" data-t="B">عبارات متطابقة</button><button class="chip" data-t="C">اختلاف يسير</button></div></div>
+<div class="chips" id="fl"><button class="chip on" data-t="">الكل</button><button class="chip" data-t="A">آيات متطابقة</button><button class="chip" data-t="B">عبارات متطابقة</button><button class="chip" data-t="C">اختلاف يسير</button><button class="chip" data-t="I">ضوابط إغاثة اللهفان</button></div></div>
 <div class="ctl" id="cv" hidden><label>السورة</label><select id="vs"></select><label>الآية</label><input type="number" id="va" min="1" value="1">
 <button class="btn" id="vp">‹ السابقة</button><button class="btn" id="vn">التالية ›</button></div>
 <div class="ctl" id="cq" hidden><input type="search" id="qi" placeholder="اكتب كلمات من الآية بلا تشكيل، مثل: ولا تقتلوا أولادكم"><label class="ex" title="تظهر المواضع التي فيها العبارة نفسها بكلماتها وترتيبها، دون زيادة حرف أو نقصه"><input type="checkbox" id="qx">العبارة بنصها</label><button class="btn p" id="qb">ابحث</button><div class="xo" id="xo"><label class="ex"><input type="checkbox" id="xm" checked>عرض طريقة الضبط</label><label class="ex"><input type="checkbox" id="xw">عرض التوجيه</label></div></div>
-<div class="ctl" id="cz" hidden><label>النطاق</label><select id="zs"></select><label>نوع السؤال</label><select id="zt"><option value="m">منوّع</option><option value="w">في أي موضع؟</option><option value="c">أكمل الكلمة</option></select><button class="btn p" id="zn">سؤال جديد</button><span class="score" id="zsc"></span></div>
-<div id="kv" hidden></div><div id="tv" hidden></div><div id="daily"></div><div class="info" id="info"></div><div id="res"></div></div></main>
+<div class="ctl" id="cz" hidden><label>النطاق</label><select id="zs"></select><label>نوع السؤال</label><select id="zt"><option value="m">منوّع</option><option value="w">في أي موضع؟</option><option value="c">أكمل الكلمة</option><option value="g">مواضع إغاثة اللهفان</option></select><button class="btn p" id="zn">سؤال جديد</button><span class="score" id="zsc"></span></div>
+<div id="home" hidden></div><div class="ctl" id="ci" hidden><label>طريقة الضبط</label><select id="im"></select><label>السورة</label><select id="is"></select></div><div id="iv" hidden></div><div class="ctl" id="cm" hidden><label>السورة</label><select id="ms"></select><label>الآية</label><input type="number" id="ma" min="1" placeholder="—"><button class="btn" id="mgo">انتقل</button><button class="btn" id="mp">‹ السورة السابقة</button><button class="btn" id="mn">التالية ›</button></div><div id="mv" hidden></div><div id="nv" hidden></div><div id="kv" hidden></div><div id="tv" hidden></div><div id="daily"></div><div class="info" id="info"></div><div id="res"></div></div></main>
 <div id="ab" hidden><div class="box"><div class="abh"><button class="x" id="abx">إغلاق ✕</button><h2>إتحاف الحُفّاظ بمتشابه الألفاظ</h2><p>التطبيق التفاعلي للمتشابه اللفظي في القرآن الكريم</p></div><div class="abb">
 <h3>عن التطبيق</h3>
 <p>تطبيق يجمع المتشابه اللفظي في القرآن الكريم سورةً سورة، ويضع أمام كل موضع نظائره بنصها، ويبيّن الفرق بينها بالألوان، ويذكر طريقة تمييز كل موضع من غيره، مع توجيه العلماء لسبب اختلاف اللفظ.</p>
-<p class="src">مادته من كتاب «إتحاف الحُفّاظ بمتشابه الألفاظ» في سبعة أجزاء على تحزيب الصحابة رضي الله عنهم (فمي بشوق)، والتوجيه من: «درة التنزيل وغرة التأويل» للخطيب الإسكافي، و«البرهان في توجيه متشابه القرآن» للكرماني، و«ملاك التأويل» لابن الزبير الغرناطي.</p>
+<p class="src">مادته من كتاب «إتحاف الحُفّاظ بمتشابه الألفاظ» في سبعة أجزاء على تحزيب الصحابة رضي الله عنهم (فمي بشوق)، والتوجيه من: «درة التنزيل وغرة التأويل» للخطيب الإسكافي، و«البرهان في توجيه متشابه القرآن» للكرماني، و«ملاك التأويل» لابن الزبير الغرناطي. ويضم التطبيق أيضًا ضوابط «إغاثة اللهفان في ضبط متشابهات القرآن» لعبد الله الوراقي، وقواعد «الضبط بالتقعيد للمتشابه اللفظي في القرآن المجيد» لفواز الحنين، وعرض «مهارات ضبط المتشابه اللفظي» للدكتور محمد عمر الجنايني، و«جامع المنظومات في ضبط المتشابهات» للدكتور أحمد مصطفى متولي، مع إتاحة تحميلها. ونص المصحف في التطبيق بالرسم العثماني من «موسوعة القرآن الكريم» (quranenc.com) المأخوذ من مصحف مجمع الملك فهد.</p>
 <h3>أهميته</h3>
 <ul>
 <li>المتشابه اللفظي أكثر ما يقع فيه الخطأ عند الحافظ، فيدخل عليه موضع في موضع، وهذا التطبيق يضع المواضع المتشابهة أمام عينه في مكان واحد.</li>
@@ -199,31 +254,40 @@ html.dark .sh{background:#0B5D4B}
 <li>يربط الحفظ بالفهم، فيعرف الحافظ لماذا جاء اللفظ هنا هكذا وهناك هكذا، فيثبت في ذهنه.</li>
 <li>يعين المعلّم في الحلقة على تنبيه طلابه إلى مواضع الاشتباه قبل وقوعهم فيها.</li>
 </ul>
-<h3>ميزاته وطريقة استعمالها</h3>
+<h3>أقسام التطبيق</h3>
 <ul>
-<li><b>بالسورة:</b> اختر سورة فتظهر كل متشابهاتها، ويمكنك أن تقصرها على نوع واحد: الآيات المتطابقة، أو العبارات المتطابقة، أو ما فيه اختلاف يسير.</li>
-<li><b>بالآية:</b> اختر السورة ورقم الآية فتظهر المجموعات التي تدخل فيها، وتنتقل بين الآيات بزرَّي «السابقة» و«التالية».</li>
-<li><b>بالنص:</b> اكتب كلمات من الآية بلا تشكيل فتظهر المواضع التي فيها هذه الكلمات.</li>
-<li><b>العبارة بنصها:</b> فعّل هذا الخيار في البحث بالنص فلا يظهر إلا ما ورد بالعبارة نفسها بكلماتها وترتيبها، مرتبًا على ترتيب المصحف، مع خيارَي عرض طريقة الضبط والتوجيه.</li>
+<li><b>القائمة الرئيسة:</b> يفتح التطبيق على قائمة بأقسامه كلها، فاختر القسم الذي تريد، وللرجوع إليها اضغط زر «☰ القائمة» العائم أسفل الشاشة. وتحت القائمة «متشابه اليوم»: مجموعة جديدة كل يوم للمراجعة والإرسال في مجموعات التحفيظ.</li>
+<li><b>المصحف ومواضع المتشابه:</b> المصحف كاملًا بالرسم العثماني سورةً سورة، وتحت مواضع المتشابه خط: أخضر لما في كتاب الإتحاف، وذهبي متقطع لضوابط إغاثة اللهفان. اضغط على الآية فتظهر نافذة صغيرة فيها نظائرها مختصرة وتمييزها وطريقة ضبطها، ومنها تنتقل إلى التفاصيل الكاملة.</li>
+<li><b>المتشابه بالسورة:</b> اختر سورة فتظهر كل متشابهاتها، ويمكنك أن تقصرها على نوع واحد: الآيات المتطابقة، أو العبارات المتطابقة، أو ما فيه اختلاف يسير، أو «ضوابط إغاثة اللهفان» في السورة.</li>
+<li><b>المتشابه بالآية:</b> اختر السورة ورقم الآية فتظهر المجموعات التي تدخل فيها، وما في إغاثة اللهفان ومنظومة الدمياطي عنها، وتنتقل بين الآيات بزرَّي «السابقة» و«التالية».</li>
+<li><b>البحث بالنص:</b> اكتب كلمات من الآية بلا تشكيل فتظهر المواضع التي فيها هذه الكلمات. وإذا فعّلت «العبارة بنصها» لم يظهر إلا ما ورد بالعبارة نفسها بكلماتها وترتيبها، مرتبًا على ترتيب المصحف، مع خيارَي عرض طريقة الضبط والتوجيه.</li>
+<li><b>إغاثة اللهفان:</b> ضوابط الأستاذ عبد الله الوراقي لأكثر من ١٧٠٠ موضع من المتشابه، تتصفحها بحسب طريقة الضبط أو السورة. ويظهر ضابطه أيضًا تحت المجموعة الموافقة له في سائر الأقسام، ومعه رابط إلى صفحته في كتابه.</li>
+<li><b>الضبط بالتقعيد:</b> قواعد كتاب الشيخ فواز بن سعد الحنين: ثماني قواعد عامة واثنتان وعشرون خاصة، لكل قاعدة خلاصتها ومثالها، وصفحاتها من الكتاب كاملة.</li>
+<li><b>المنظومات:</b> كتاب «جامع المنظومات في ضبط المتشابهات» للدكتور أحمد مصطفى متولي، وفيه منظومات السخاوي والنميري والدمياطي وفهرس كلماتها، تقرؤها داخل التطبيق. وتظهر صفحات منظومة الدمياطي تحت الآيات التي تشير إليها.</li>
+<li><b>مهارات الضبط:</b> عرض الدكتور محمد عمر الجنايني «مهارات ضبط المتشابه اللفظي في القرآن الكريم» بشرائحه كاملة: تعريف المتشابه ومؤلفاته، وأسباب الخطأ فيه، وثلاث عشرة قاعدة لضبطه بأمثلتها.</li>
+<li><b>اختبر حفظك:</b> ثلاثة أنواع من الأسئلة: «في أي موضع وردت الآية بهذا اللفظ؟» و«أكمل الكلمة» و«مواضع إغاثة اللهفان»، على القرآن كله أو على حزب أو سورة، مع النتيجة وطريقة الضبط بعد كل جواب.</li>
+<li><b>المفضلة ☆:</b> اضغط النجمة على أي مجموعة تُشكل عليك لتجدها في قسم «المفضلة»، وتُحفظ في جهازك.</li>
+</ul>
+<h3>أدوات في كل مجموعة</h3>
+<ul>
 <li><b>الألوان:</b> الكلمات الملوّنة هي موضع الاشتباه أو الفرق بين المواضع، و◆ تدل على الموضع الذي تبحث فيه.</li>
 <li><b>التمييز (طريقة الضبط):</b> تحت كل موضع ما يميّزه من نظائره، كالكلمة التي قبله أو بعده.</li>
 <li><b>التوجيه:</b> في أسفل كل مجموعة توجيه الإسكافي والكرماني وابن الزبير لسبب اختلاف اللفظ، اضغط على اسم أحدهم ليظهر كلامه.</li>
-<li><b>في الكتاب:</b> يفتح ملف الجزء على الصفحة التي ذُكر فيها الموضع.</li>
+<li><b>في الكتاب:</b> يفتح الكتاب داخل التطبيق على الصفحة التي ذُكر فيها الموضع مباشرة، مع التكبير والتنزيل. وكذلك أزرار «الكتاب ص» في إغاثة اللهفان وصفحات المنظومات.</li>
 <li><b>الاستماع ▶:</b> يُسمعك الآية بصوت قارئ تختاره من الإعدادات ⚙، ويحتاج إلى اتصال بالإنترنت.</li>
 <li><b>مشاركة:</b> يصنع بطاقة مزخرفة فيها المتشابه مع اسم الكتاب، ترسلها في واتساب أو تيليجرام، وتختار أن يظهر فيها طريقة الضبط أو التوجيه.</li>
-<li><b>المفضلة ☆:</b> اضغط النجمة على أي مجموعة تُشكل عليك لتجدها في تبويب «المفضلة»، وتُحفظ في جهازك.</li>
-<li><b>اختبر حفظك:</b> أسئلة من نوعين: «في أي موضع وردت الآية بهذا اللفظ؟» و«أكمل الكلمة»، على القرآن كله أو على حزب أو سورة، مع النتيجة وطريقة الضبط بعد كل جواب.</li>
-<li><b>متشابه اليوم:</b> مجموعة جديدة كل يوم في أعلى تبويب السورة، تصلح للمراجعة اليومية وللإرسال في مجموعات التحفيظ.</li>
-<li><b>مهارات الضبط:</b> تبويب فيه عرض الدكتور محمد عمر الجنايني «مهارات ضبط المتشابه اللفظي في القرآن الكريم» بشرائحه كاملة: تعريف المتشابه ومؤلفاته، وأسباب الخطأ فيه، وثلاث عشرة قاعدة لضبطه بأمثلتها.</li>
-<li><b>الضبط بالتقعيد:</b> تبويب فيه قواعد كتاب الشيخ فواز بن سعد الحنين «الضبط بالتقعيد للمتشابه اللفظي في القرآن المجيد»: ثماني قواعد عامة واثنتان وعشرون خاصة، لكل قاعدة خلاصتها ومثالها، وصفحاتها من الكتاب كاملة، مع إتاحة تحميل الكتاب.</li>
-<li><b>الإعدادات ⚙:</b> تكبير الخط وتصغيره، والوضع الليلي، واختيار القارئ.</li>
-<li><b>يتحدث تلقائيًّا:</b> كلما صدرت نسخة جديدة وصلتك وحدها عند فتح التطبيق مع الاتصال بالإنترنت، وتظهر لك رسالة بما أُضيف. وإن رأيت شيئًا قديمًا فاضغط ⚙ ثم «تحديث التطبيق الآن».</li>
-<li><b>يعمل بلا إنترنت:</b> من قائمة المتصفح في الجوال اختر «إضافة إلى الشاشة الرئيسية» فيصير تطبيقًا يعمل دون اتصال، وكل جزء من الكتاب تفتحه مرة يبقى محفوظًا.</li>
+</ul>
+<h3>الإعدادات والتحديث</h3>
+<ul>
+<li><b>الإعدادات ⚙:</b> تكبير الخط وتصغيره، والوضع الليلي، واختيار القارئ، وزر «تحديث التطبيق الآن».</li>
+<li><b>يتحدث تلقائيًّا:</b> كلما صدرت نسخة جديدة وصلتك وحدها عند فتح التطبيق مع الاتصال بالإنترنت، وتظهر لك رسالة بما أُضيف.</li>
+<li><b>يعمل بلا إنترنت:</b> من قائمة المتصفح في الجوال اختر «إضافة إلى الشاشة الرئيسية» فيصير تطبيقًا يعمل دون اتصال، وكل كتاب تفتحه مرة يبقى محفوظًا.</li>
 </ul>
 <h3>كيف تستفيد منه</h3>
 <ol>
-<li>قبل أن تبدأ حفظ سورة، افتحها في تبويب «بالسورة» وتعرّف متشابهاتها، فتحفظ وأنت منتبه لها.</li>
-<li>عند المراجعة، اختبر نفسك في السورة أو الحزب الذي تراجعه من تبويب «اختبر حفظك».</li>
+<li>قبل أن تبدأ حفظ سورة، افتحها في «المصحف ومواضع المتشابه» لترى مواضع الاشتباه فيها، أو في «المتشابه بالسورة» لتقرأ تمييزها وتوجيهها.</li>
+<li>اختر لكل موضع الضابط الذي يناسبك: تمييز الإتحاف، أو ضابط الوراقي، أو قاعدة من «الضبط بالتقعيد»، أو بيت من المنظومات.</li>
+<li>عند المراجعة، اختبر نفسك في السورة أو الحزب الذي تراجعه من «اختبر حفظك».</li>
 <li>كل موضع أخطأت فيه أضفه إلى المفضلة، وارجع إليه حتى يثبت.</li>
 <li>اقرأ التوجيه، فمعرفة سبب اختلاف اللفظ أثبت للحفظ من التكرار وحده.</li>
 <li>إذا اشتبهت عليك عبارة، فابحث عنها بنصها لترى كل مواضعها مرتبة.</li>
@@ -238,6 +302,9 @@ html.dark .sh{background:#0B5D4B}
 <p class="src" style="text-align:center;margin-top:14px">نسأل الله أن ينفع به، وأن يجعله خالصًا لوجهه الكريم.</p>
 </div></div></div>
 <div id="up" hidden></div>
+<div id="pv" hidden><div class="pvh"><b id="pvt"></b><span id="pvc"></span><button class="btn" id="pvm">−</button><span id="pvz">١٠٠٪</span><button class="btn" id="pvp">+</button><a class="btn" id="pvd" download target="_blank" rel="noopener">تنزيل</a><button class="btn" id="pvx">إغلاق ✕</button></div><div id="pvb"></div></div>
+<div id="pop" hidden></div>
+<button id="fab" hidden title="العودة إلى القائمة الرئيسة">☰ القائمة</button>
 <div id="lb" hidden><div class="lbw" id="lbw"><img id="lbi" alt=""></div><div class="lbb"><button class="btn" id="lbn">‹ السابقة</button><span id="lbc"></span><button class="btn" id="lbp">التالية ›</button><button class="btn" id="lbz">تكبير</button><button class="btn p" id="lbx">إغلاق ✕</button></div></div>
 <div id="sm" hidden><div class="box"><img id="smi" alt="البطاقة"><div class="row"><label class="ex"><input type="checkbox" id="smt" checked>طريقة الضبط</label><label class="ex"><input type="checkbox" id="smw">التوجيه</label></div><div class="row"><button class="btn p" id="sms">مشاركة</button><button class="btn" id="smd">تحميل الصورة</button><button class="btn" id="smc">إغلاق</button></div></div></div>
 <footer>إعداد: كليب بن أحمد بن ضيف الله الزهراني · المصادر: درة التنزيل للإسكافي، البرهان للكرماني، ملاك التأويل لابن الزبير</footer>
@@ -280,6 +347,7 @@ function card(gi,s,v,M){
     const tmh=g.t=='C'?(/^(مثل|—)/.test(tm)?esc(tm):`<span class="tq">${esc(tm)}</span>`):esc(tm);
     h+=`<div class="pl"><span class="lb${tg}" data-s="${ps}" data-a="${pa}">${D.names[ps-1]} ${ar(pa)}</span> ${tools(ps,pa)} <span class="q"><span class="br">﴿</span>${w}<span class="br">﴾</span></span><div class="tm"><b>التمييز:</b> ${tmh}</div></div>`;
   }
+  if(IGG[gi]&&IGG[gi].length)h+='<div class="igw">'+IGG[gi].slice(0,4).map(r=>`<div class="r"><b>ضابط إغاثة اللهفان:</b> ${IG[r][2].map(m=>`<span class="mc">${esc(m)}</span>`).join(' ')} ${igLink(r)}</div>`).join('')+'</div>';
   if(g.w.length){h+='<div class="tw">';let last='';
     g.w.forEach(([who,t])=>{h+=`<details${g.w.length<=2&&who!=last?' open':''}><summary class="${SC[who]}">توجيه ${who}</summary><div class="twt">${quote(t)}</div></details>`;last=who;});
     h+='</div>';}
@@ -296,6 +364,7 @@ function more(){
 function showS(){
   const s=+$('ss').value;location.hash='s='+s;
   let L=D.s[s]||[];const c={A:0,B:0,C:0};L.forEach(gi=>c[D.g[gi].t]++);
+  if(ftype=='I'){const R=IGS[s]||[];$('info').textContent=`ضوابط إغاثة اللهفان في سورة ${D.names[s-1]}: ${ar(R.length)} ${R.length>2&&R.length<11?'مواضع':'موضعًا'}.`;renderIG(R,s);return}
   if(ftype)L=L.filter(gi=>D.g[gi].t==ftype);
   $('info').textContent=`سورة ${D.names[s-1]}: ${ar(c.A)} آية متطابقة، و${ar(c.B)} عبارة متطابقة، و${ar(c.C)} موضعًا من المتشابه مع اختلاف يسير.`;
   render(L,s);
@@ -304,11 +373,14 @@ function showV(){
   const s=+$('vs').value;let a=+$('va').value||1;a=Math.max(1,Math.min(a,D.cnt[s-1]));$('va').value=a;$('va').max=D.cnt[s-1];
   location.hash='v='+s+':'+a;
   const L=D.v[s+':'+a]||[];const ord={A:0,C:1,B:2};L.sort((x,y)=>ord[D.g[x].t]-ord[D.g[y].t]);
-  $('info').textContent=L.length?`${D.names[s-1]} ${ar(a)}: ${ar(L.length)} ${L.length>2&&L.length<11?'مجموعات':'مجموعة'} من المتشابه.`:`${D.names[s-1]} ${ar(a)}: لا متشابه مسجَّلًا لهذه الآية.`;
+  $('info').textContent=L.length?`${D.names[s-1]} ${ar(a)}: ${cn(L.length,'مجموعة واحدة','مجموعتان','مجموعات','مجموعة')} من المتشابه.`:`${D.names[s-1]} ${ar(a)}: لا متشابه مسجَّلًا لهذه الآية.`;
   render(L,s,a);
+  const mz=mzLine(s,a);if(mz)$('res').insertAdjacentHTML('afterbegin',`<div class="card">${mz}</div>`);
+  const sh=new Set(L.flatMap(gi=>IGG[gi]||[])),X=(IGV[s+':'+a]||[]).filter(r=>!sh.has(r));
+  if(X.length){$('res').insertAdjacentHTML('beforeend',`<div class="igh">ومن «إغاثة اللهفان» في هذه الآية:</div>`+X.map(r=>igCard(r,s,a)).join(''));if(!L.length)$('info').textContent=`${D.names[s-1]} ${ar(a)}: لا متشابه مسجَّلًا في كتاب الإتحاف، وفي إغاثة اللهفان ${ar(X.length)}.`;}
 }
 function showQ(){
-  xOpts();if($('qx').checked)return showX();
+  if(!$('qi').value.trim())location.hash='q';xOpts();if($('qx').checked)return showX();
   const q=loose($('qi').value);if(q.length<2){$('info').textContent='اكتب كلمتين على الأقل.';$('res').innerHTML='';return;}
   location.hash='q='+encodeURIComponent($('qi').value);
   const L=[];NG.forEach((t,i)=>{if(t.includes(q))L.push(i)});
@@ -351,8 +423,13 @@ function moreH(){const b=document.querySelector('.more');if(b)b.remove();
   if(shown<HL.length)$('res').insertAdjacentHTML('beforeend','<button class="btn p more" onclick="moreH()">عرض المزيد</button>');}
 function xOpts(){const x=$('qx').checked;$('xo').classList.toggle('on',x);
   $('res').classList.toggle('notm',x&&!$('xm').checked);$('res').classList.toggle('notw',x&&!$('xw').checked);}
-function setMode(m){mode=m;if(m!='q')$('res').classList.remove('notm','notw');document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.m==m));document.querySelector('.tabs .on')?.scrollIntoView({inline:'nearest',block:'nearest'});
-  $('cs').hidden=m!='s';$('cv').hidden=m!='v';$('cq').hidden=m!='q';$('cz').hidden=m!='z';$('daily').hidden=m!='s';$('kv').hidden=m!='k';$('tv').hidden=m!='t';$('info').hidden=m=='k'||m=='t';$('res').hidden=m=='k'||m=='t';({s:showS,v:showV,q:showQ,z:showZ,f:showF,k:showK,t:showT})[m]();}
+const MENU=[['m','📖','المصحف ومواضع المتشابه','المصحف كاملًا، وتحت مواضع المتشابه خط، اضغط عليه لترى نظائره وضبطه',1],['s','۞','المتشابه بالسورة','اختر سورة فتظهر متشابهاتها مع التمييز والتوجيه'],['v','◈','المتشابه بالآية','اختر آية فتظهر نظائرها في القرآن'],['q','⌕','البحث بالنص','ابحث بكلمات من الآية، أو بالعبارة بنصها'],['i','❖','إغاثة اللهفان','ضوابط الوراقي لأكثر من ١٧٠٠ موضع، بطريقة الضبط وصفحة الكتاب',1],['t','✎','الضبط بالتقعيد','قواعد الشيخ فواز الحنين: ٨ عامة و٢٢ خاصة بأمثلتها'],['n','✾','المنظومات','منظومات السخاوي والنميري والدمياطي في ضبط المتشابه، تقرؤها داخل التطبيق',1],['k','▤','مهارات الضبط','عرض الدكتور محمد الجنايني في قواعد ضبط المتشابه'],['z','✓','اختبر حفظك','أسئلة على المتشابه في سورة أو حزب أو القرآن كله'],['f','★','المفضلة','المجموعات التي حفظتها للمراجعة'],['a','ⓘ','عن التطبيق','ميزاته وطريقة الاستفادة منه والتواصل مع مصممه']];
+const MN=Object.fromEntries(MENU.map(x=>[x[0],x[2]]));
+function showH(){location.hash='h';$('home').innerHTML=MENU.map(([m,ic,t,d,nw])=>`<button class="mi${nw?' new':''}" data-go="${m}"><span class="ico">${ic}</span><span><b>${t}${nw?'<span class="tag">جديد</span>':''}</b><span class="d">${d}</span></span></button>`).join('')+'<h2>✦ متشابه اليوم</h2><div id="dailyH"></div>';
+  $('home').onclick=e=>{const b=e.target.closest('[data-go]');if(!b)return;if(b.dataset.go=='a'){$('abb').click();return}setMode(b.dataset.go);scrollTo(0,0)};
+  showDaily();}
+function setMode(m){mode=m;$('home').hidden=m!='h';$('fab').hidden=m=='h';$('cur').textContent=m=='h'?'':MN[m]||'';$('ci').hidden=m!='i';$('iv').hidden=m!='i';$('cm').hidden=m!='m';$('nv').hidden=m!='n';$('mv').hidden=m!='m';$('pop').hidden=true;if(m!='q')$('res').classList.remove('notm','notw');document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.m==m));document.querySelector('.tabs .on')?.scrollIntoView({inline:'nearest',block:'nearest'});
+  $('cs').hidden=m!='s';$('cv').hidden=m!='v';$('cq').hidden=m!='q';$('cz').hidden=m!='z';$('daily').hidden=true;$('kv').hidden=m!='k';$('tv').hidden=m!='t';$('info').hidden=m=='k'||m=='t'||m=='h';$('res').hidden=m=='k'||m=='t'||m=='h'||m=='m'||m=='n';$('info').hidden=$('info').hidden||m=='n';({n:showN,m:showM,h:showH,s:showS,v:showV,q:showQ,z:showZ,f:showF,k:showK,t:showT,i:showI})[m]();}
 function goV(s,a){$('vs').value=s;$('va').value=a;setMode('v');scrollTo(0,0);}
 /* ===== التخزين في الجهاز ===== */
 const ST={get(k,d){try{const v=localStorage.getItem('ithaf_'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('ithaf_'+k,JSON.stringify(v))}catch(e){}}};
@@ -379,12 +456,11 @@ function alertInfo(t){$('info').textContent=t}
 const HZ=['الأول','الثاني','الثالث','الرابع','الخامس','السادس','السابع'];
 function bookUrl(s,a){const r=D.pg&&D.pg[s+':'+a];if(!r)return '';return `${r[0]<3?'':'books/'}hizb${r[0]}.pdf#page=${r[1]}`;}
 function tools(s,a){const u=bookUrl(s,a),r=D.pg&&D.pg[s+':'+a];
-  return `<button class="ic au" data-s="${s}" data-a="${a}" title="استمع للآية">▶</button>`+(u?`<a class="ic" href="${u}" target="_blank" rel="noopener" title="افتح الموضع في الحزب ${HZ[r[0]-1]}، صفحة ${ar(r[1])}">في الكتاب</a>`:'');}
+  return `<button class="ic au" data-s="${s}" data-a="${a}" title="استمع للآية">▶</button>`+(u?pvLink(u.split('#')[0],`إتحاف الحفاظ · الحزب ${HZ[r[0]-1]}`,r[1],'في الكتاب'):'');}
 /* ===== متشابه اليوم ===== */
 function showDaily(){const C=[];D.g.forEach((g,i)=>{if(g.t!='A'&&g.w.length&&g.p.length<=4)C.push(i)});
   const day=Math.floor((Date.now()+3*3600e3)/864e5);let h=day*2654435761%4294967296;const gi=C[h%C.length];
-  $('daily').innerHTML=`<details class="daily"${ST.get('dailyOpen',true)?' open':''}><summary>✦ متشابه اليوم</summary>${card(gi,0)}</details>`;
-  $('daily').querySelector('details').ontoggle=e=>ST.set('dailyOpen',e.target.open);}
+  const box=$('dailyH');if(box)box.innerHTML=card(gi,0);}
 /* ===== اختبر حفظك ===== */
 const PARTS=[[1,4],[5,9],[10,16],[17,25],[26,36],[37,49],[50,114]];
 let QZ={n:0,ok:0},QP=null;
@@ -399,7 +475,7 @@ function buildQP(){QP={w:[],c:[]};
 function inScope(s){const v=$('zs').value;if(v=='0')return true;if(v[0]=='h'){const r=PARTS[+v.slice(1)-1];return s>=r[0]&&s<=r[1]}return s==+v;}
 const shuf=a=>{for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
 function showZ(){location.hash='z';if(!QP)buildQP();$('zsc').textContent=QZ.n?`النتيجة: ${ar(QZ.ok)} من ${ar(QZ.n)}`:'';newQ();}
-function newQ(){let t=$('zt').value;if(t=='m')t=Math.random()<.5?'w':'c';
+function newQ(){let t=$('zt').value;if(t=='m'){const r=Math.random();t=r<.4?'w':r<.7?'c':'g'}if(t=='g'&&IG.length)return newQI();if(t=='g')t='w';
   let pool=QP[t].filter(([gi,j])=>inScope(D.g[gi].p[j][0]));
   if(!pool.length&&t=='c'){t='w';pool=QP.w.filter(([gi,j])=>inScope(D.g[gi].p[j][0]))}
   if(!pool.length){$('info').textContent='لا أسئلة في هذا النطاق. اختر نطاقًا أوسع.';$('res').innerHTML='';return}
@@ -426,6 +502,143 @@ function newQ(){let t=$('zt').value;if(t=='m')t=Math.random()<.5?'w':'c';
     $('zsc').textContent=`النتيجة: ${ar(QZ.ok)} من ${ar(QZ.n)}`;
     $('qr').innerHTML=`<div class="qr"><b>${right?'أحسنت!':'الجواب: '+ans}</b>${p[4]?`<div class="tm"><b>طريقة الضبط:</b> ${esc(p[4])}</div>`:''}<div class="row" style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap"><button class="btn p" id="qn2">السؤال التالي</button><button class="btn" id="qg">اعرض المجموعة كاملة</button></div></div>`;
     $('qn2').onclick=newQ;$('qg').onclick=()=>{$('qr').insertAdjacentHTML('beforeend',card(gi,p[0],p[1]));$('qg').remove()};});}
+function newQI(){
+  const pool=IGQ.filter(r=>IG[r][0].some(p=>inScope(p[0])));
+  if(!pool.length){$('info').textContent='لا أسئلة في هذا النطاق. اختر نطاقًا أوسع.';$('res').innerHTML='';return}
+  const r=pool[Math.random()*pool.length|0],[P,X,M,pp]=IG[r],j=Math.random()*P.length|0;
+  const ans=plab(P[j]);const opts=[ans];const seen=new Set([X[j]]);
+  P.forEach((p,k)=>{if(k!=j&&!seen.has(X[k])&&opts.length<4){seen.add(X[k]);opts.push(plab(p))}});
+  let h=`<div class="qz"><div class="qh">في أي موضع ورد هذا اللفظ؟</div><span class="q">${esc(X[j])}</span><div class="opts">${shuf(opts).map(o=>`<button class="opt" data-v="${o}">${o}</button>`).join('')}</div><div id="qr"></div></div>`;
+  $('info').textContent='اختر الجواب الصحيح. (من كتاب إغاثة اللهفان)';$('res').innerHTML=h;
+  $('res').querySelectorAll('.opt').forEach(b=>b.onclick=()=>{if($('res').querySelector('.opt.ok'))return;
+    const right=b.dataset.v==ans;QZ.n++;if(right)QZ.ok++;
+    $('res').querySelectorAll('.opt').forEach(x=>{if(x.dataset.v==ans)x.classList.add('ok')});if(!right)b.classList.add('no');
+    $('zsc').textContent=`النتيجة: ${ar(QZ.ok)} من ${ar(QZ.n)}`;
+    $('qr').innerHTML=`<div class="qr"><b>${right?'أحسنت!':'الجواب: '+ans}</b><div class="tm"><b>ضابط الوراقي:</b> ${M.map(m=>esc(m)).join('، ')} ${igLink(r)}</div><div class="row" style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap"><button class="btn p" id="qn2">السؤال التالي</button><button class="btn" id="qg">اعرض المواضع كاملة</button></div></div>`;
+    $('qn2').onclick=newQ;$('qg').onclick=()=>{$('qr').insertAdjacentHTML('beforeend',igCard(r));$('qg').remove()};});}
+/* ===== إغاثة اللهفان (عبد الله الوراقي) ===== */
+let IG=[],IGV={},IGG={},IGS={},IGQ=[];
+const plab=p=>`${D.names[p[0]-1]} ${ar(p[1])}${p[2]>p[1]?'–'+ar(p[2]):''}`;
+const igCat=m=>m.replace(/\s*\(.*$/,'');
+function igVs(P){const vs=new Set();P.forEach(([s,a,b])=>{for(let k=a;k<=b;k++)vs.add(s+':'+k)});return vs;}
+function initIG(ig){IG=ig||[];IGV={};IGG={};IGS={};IGQ=[];
+  IG.forEach(([P,X],r)=>{const vs=igVs(P);P.forEach(([s])=>{const L=IGS[s]=IGS[s]||[];if(!L.includes(r))L.push(r)});
+    vs.forEach(v=>(IGV[v]=IGV[v]||[]).push(r));
+    if(P.length>=2&&new Set(X).size>=2)IGQ.push(r);
+    // ربط الصف بمجموعات الإتحاف التي يشاركها في موضعين فأكثر
+    const cnt={};vs.forEach(v=>(D.v[v]||[]).forEach(gi=>cnt[gi]=(cnt[gi]||0)+1));
+    for(const gi in cnt){const gs=new Set(D.g[gi].p.map(p=>p[0]+':'+p[1]));let k=0;vs.forEach(v=>{if(gs.has(v))k++});
+      if(k>=2||(k>=1&&vs.size==1))(IGG[gi]=IGG[gi]||[]).push(r);}});}
+const igLink=r=>pvLink('ighatha-allahfan.pdf','إغاثة اللهفان في ضبط متشابهات القرآن',IG[r][3],`الكتاب ص ${ar(IG[r][3]-(IG[r][3]<=238?2:3))}`);
+function igCard(r,s,a){const [P,X,M]=IG[r];
+  let h=`<div class="card igc"><div class="ch"><span class="badge bI">إغاثة اللهفان</span><span class="head" style="font-family:AmiriW;font-size:18px">${M.map(m=>`<span class="mc">${esc(m)}</span>`).join(' ')}</span><span class="num">${ar(P.length)} ${P.length>2&&P.length<11?'مواضع':'موضع'}</span></div>`;
+  P.forEach((p,k)=>{const tg=s&&p[0]==s&&(!a||(a>=p[1]&&a<=p[2]))?' tg':'';
+    h+=`<div class="pl"><span class="lb${tg}" data-s="${p[0]}" data-a="${p[1]}">${plab(p)}</span> ${tools(p[0],p[1])} <span class="q">${esc(X[k]||'')}</span></div>`});
+  return h+`<div class="igw"><b>المرجع:</b> إغاثة اللهفان للوراقي ${igLink(r)}</div></div>`;}
+let IGL=[],IGsh=0,IGctx=[0,0];
+function renderIG(L,s,a){IGL=L;IGsh=0;IGctx=[s,a];$('res').innerHTML='';moreIG();}
+function moreIG(){const b=document.querySelector('.more');if(b)b.remove();
+  $('res').insertAdjacentHTML('beforeend',IGL.slice(IGsh,IGsh+40).map(r=>igCard(r,IGctx[0],IGctx[1])).join('')||'<div class="none">لا يوجد شيء هنا.</div>');IGsh+=40;
+  if(IGsh<IGL.length)$('res').insertAdjacentHTML('beforeend','<button class="btn p more" onclick="moreIG()">عرض المزيد</button>');}
+function showI(){location.hash='i';
+  if(!$('iv').innerHTML){
+    $('iv').innerHTML=`<div class="kh"><h2>إغاثة اللهفان في ضبط متشابهات القرآن</h2><div class="by">تأليف الأستاذ عبد الله بن عبد الحميد الوراقي</div>
+    <div>ضوابط المؤلف لأكثر من ١٧٠٠ موضع من المتشابه، مرتبة على السور. أكثرها يربط الكلمة المختلفة باسم السورة: بحرف مشترك، أو بالترتيب الأبجدي، أو بعدد النقاط، وغير ذلك. اختر طريقة الضبط أو السورة لتتصفح المواضع، واضغط «الكتاب» لقراءة شرح المؤلف.</div>
+    <div class="ref"><b>المرجع:</b> الوراقي، عبد الله بن عبد الحميد. «إغاثة اللهفان في ضبط متشابهات القرآن». الطبعة الثانية. الإسكندرية: دار القمة ودار الإيمان. المواضع منقولة من نص المصحف، وطريقة الضبط مختصرة من كلام المؤلف، والحقوق لمؤلفه. <a href="ighatha-allahfan.pdf" target="_blank" rel="noopener" download>تحميل الكتاب كاملًا (PDF)</a></div></div>`;
+    const cats={};IG.forEach(([,,M])=>new Set(M.map(igCat)).forEach(c=>cats[c]=(cats[c]||0)+1));
+    $('im').innerHTML=`<option value="">كل الطرق (${ar(IG.length)})</option>`+Object.entries(cats).sort((a,b)=>b[1]-a[1]).map(([c,n])=>`<option value="${esc(c)}">${esc(c)} (${ar(n)})</option>`).join('');
+    $('is').innerHTML='<option value="0">كل السور</option>'+D.names.map((n,i)=>IGS[i+1]?`<option value="${i+1}">${ar(i+1)}. ${n}</option>`:'').join('');
+    $('im').onchange=$('is').onchange=showI;}
+  const c=$('im').value,s=+$('is').value;
+  const L=IG.map((x,r)=>r).filter(r=>(!c||IG[r][2].some(m=>igCat(m)==c))&&(!s||IG[r][0].some(p=>p[0]==s)));
+  if(s)L.sort((x,y)=>{const f=r=>IG[r][0].find(p=>p[0]==s)[1];return f(x)-f(y)});
+  $('info').hidden=false;$('res').hidden=false;
+  $('info').textContent=`${ar(L.length)} ${L.length>2&&L.length<11?'مواضع':'موضعًا'}${c?' بطريقة «'+c+'»':''}${s?' في سورة '+D.names[s-1]:''}.`;
+  renderIG(L,s);}
+/* ===== المصحف مع مواضع المتشابه ===== */
+let QT=null;
+const mk=w=>w.normalize('NFC').replace(/[ؐ-ًؚ-ٰٟۖ-ۭ࣓-ࣿـ]/g,'').replace(/[ٱأإآ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/[^ء-ي]/g,'');
+const msk=w=>mk(w).replace(/[اويء]/g,'');
+function findSeq(K,q){if(!q.length)return -1;for(let i=0;i+q.length<=K.length;i++){let ok=true;for(let k=0;k<q.length;k++)if(K[i+k]!==q[k]){ok=false;break}if(ok)return i}return -1;}
+function verseMarks(s,a,W){const K=W.map(mk),S=W.map(msk),U=new Array(W.length).fill(0);
+  (D.v[s+':'+a]||[]).forEach(gi=>D.g[gi].p.forEach(p=>{if(p[0]!=s||p[1]!=a)return;const fw=p[2].split(' ');const st=findSeq(K,fw.map(mk));if(st<0)return;
+    const idx=p[3].length?p[3]:fw.map((x,i)=>i);idx.forEach(i=>{if(st+i<U.length)U[st+i]|=1})}));
+  (IGV[s+':'+a]||[]).forEach(r=>{const [P,X]=IG[r];P.forEach((p,k)=>{if(p[0]!=s||a<p[1]||a>p[2])return;
+    String(X[k]||'').replace(/[﴿﴾]/g,'').split(/…|⁂/).forEach(seg=>{const q=seg.trim().split(/\s+/).map(msk).filter(Boolean);if(q.length<1)return;const st=findSeq(S,q);if(st>=0)for(let i=0;i<q.length;i++)U[st+i]|=2;});});});
+  return U;}
+function showM(){
+  if(!$('ms').options.length){$('ms').innerHTML=D.names.map((n,i)=>`<option value="${i+1}">${ar(i+1)}. ${n}</option>`).join('');
+    $('ms').onchange=()=>{$('ma').value='';showM()};$('mgo').onclick=showM;$('ma').onkeydown=e=>{if(e.key=='Enter')showM()};
+    $('mp').onclick=()=>{const s=+$('ms').value;if(s>1){$('ms').value=s-1;$('ma').value='';showM()}};$('mn').onclick=()=>{const s=+$('ms').value;if(s<114){$('ms').value=s+1;$('ma').value='';showM()}};}
+  const s=+$('ms').value||1,a=+$('ma').value||0;location.hash='m='+s+(a?':'+a:'');
+  if(!QT){$('mv').innerHTML='<div class="none">جارٍ تحميل المصحف…</div>';fetch('quran.json').then(r=>r.json()).then(q=>{QT=q;showM()}).catch(()=>{$('mv').innerHTML='<div class="none">تعذّر تحميل المصحف. تأكد من الاتصال بالإنترنت.</div>'});return}
+  const V=QT[s-1];let n1=0,n2=0;
+  let h=`<div class="msh">سورة ${D.names[s-1]}</div>`;
+  if(s!=1&&s!=9)h+='<div class="mbs">بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ</div>';
+  h+='<div class="mt">';
+  V.forEach((t,i)=>{const W=t.split(' '),U=verseMarks(s,i+1,W);const ex=(D.v[s+':'+(i+1)]||[]).length+(IGV[s+':'+(i+1)]||[]).length>0||!!MZR[s+':'+(i+1)],has=ex||U.some(Boolean),nm=ex&&!U.some(Boolean);if(U.some(x=>x&1))n1++;if(U.some(x=>x&2))n2++;
+    h+=`<span class="ma${has?' hv':''}" id="ma${i+1}" data-a="${i+1}">`+W.map((w,k)=>U[k]?`<span class="u u${U[k]}">${w}</span>`:w).join(' ')+` <span class="an${nm?' ax':''}">${ar(i+1)}</span></span> `;});
+  h+='</div>';
+  $('mv').innerHTML=`<div class="lg"><span class="u u1">خط أخضر</span> متشابه «الإتحاف» (${cn(n1,'آية واحدة','آيتان','آيات','آية')})، و<span class="u u2">خط ذهبي</span> ضوابط «إغاثة اللهفان» (${n2?cn(n2,'آية واحدة','آيتان','آيات','آية'):'لا شيء'}). اضغط على الآية المخطوط تحتها، أو التي رقمها مظلَّل، لترى مواضعها وضبطها.</div>`+h;$('info').hidden=true;
+  if(a)setTimeout(()=>{const e=$('ma'+a);if(e){e.scrollIntoView({behavior:'instant',block:'center'});e.classList.add('fl');setTimeout(()=>e.classList.remove('fl'),2500)}},50);
+  $('mv').onclick=e=>{const v=e.target.closest('.ma.hv');if(v)mPop(s,+v.dataset.a);};}
+function mPop(s,a){const G=D.v[s+':'+a]||[],R=IGV[s+':'+a]||[];
+  let h=`<div class="pph"><b>${D.names[s-1]} ${ar(a)}</b><button class="btn" id="ppx">إغلاق ✕</button></div><div class="ppb">`;
+  G.forEach(gi=>{const g=D.g[gi],me=g.p.find(p=>p[0]==s&&p[1]==a);
+    h+=`<div class="ppi"><span class="badge b${g.t}">${TN[g.t]}</span> <span class="pps">${g.p.filter(p=>p!==me).slice(0,6).map(p=>`<button class="ic lb" data-s="${p[0]}" data-a="${p[1]}">${D.names[p[0]-1]} ${ar(p[1])}</button>`).join(' ')}${g.p.length>7?' …':''}</span>${me&&me[4]?`<div class="tm"><b>التمييز:</b> ${esc(me[4])}</div>`:''}</div>`;});
+  R.forEach(r=>{const [P,X,M]=IG[r];h+=`<div class="ppi"><span class="badge bI">إغاثة اللهفان</span> <span class="pps">${P.filter(p=>!(p[0]==s&&a>=p[1]&&a<=p[2])).map(p=>`<button class="ic lb" data-s="${p[0]}" data-a="${p[1]}">${plab(p)}</button>`).join(' ')}</span><div class="tm"><b>الضبط:</b> ${M.map(m=>esc(m)).join('، ')} ${igLink(r)}</div></div>`;});
+  h+=mzLine(s,a)+`</div><div class="ppf"><button class="btn p" id="ppd">التفاصيل الكاملة للآية</button></div>`;
+  $('pop').innerHTML=h;$('pop').hidden=false;
+  $('ppx').onclick=()=>{$('pop').hidden=true};$('ppd').onclick=()=>{$('pop').hidden=true;goV(s,a)};
+  $('pop').querySelectorAll('.lb').forEach(b=>b.addEventListener('click',()=>{$('pop').hidden=true},true));}
+/* ===== قارئ الكتب داخل التطبيق (pdf.js) ===== */
+let PDFJS=null;const PV={url:'',doc:null,z:1,obs:null,from:1,to:1};
+async function pdfLib(){if(!PDFJS){PDFJS=await import('./pdf.min.mjs');PDFJS.GlobalWorkerOptions.workerSrc='pdf.worker.min.mjs';}return PDFJS;}
+async function openPDF(url,title,from,to,at){
+  $('pv').hidden=false;document.body.style.overflow='hidden';$('pvt').textContent=title;$('pvd').href=url;
+  $('pvb').innerHTML='<div class="none" style="color:#fff">جارٍ فتح الكتاب…</div>';
+  try{const L=await pdfLib();
+    if(PV.url!==url){PV.doc=await L.getDocument(navigator.onLine===false?{url,disableRange:true,disableStream:true}:{url,disableAutoFetch:true,rangeChunkSize:262144}).promise;PV.url=url;}
+  }catch(e){$('pvb').innerHTML='<div class="none" style="color:#fff">تعذّر فتح الكتاب هنا. استعمل زر «تنزيل».</div>';return}
+  const N=PV.doc.numPages;from=Math.max(1,from||1);to=Math.min(N,to||N);at=Math.min(to,Math.max(from,at||from));PV.from=from;PV.to=to;
+  const p1=await PV.doc.getPage(at),vp=p1.getViewport({scale:1}),ratio=vp.width/vp.height;
+  let h='';for(let n=from;n<=to;n++)h+=`<div class="pg" id="pg${n}" data-n="${n}" style="aspect-ratio:${ratio}"><span class="pgn">${ar(n)}</span></div>`;
+  $('pvb').innerHTML=h;pvZoom(0);
+  if(PV.obs)PV.obs.disconnect();
+  PV.obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)pvRender(e.target)}),{root:$('pvb'),rootMargin:'800px 0px'});
+  $('pvb').querySelectorAll('.pg').forEach(d=>PV.obs.observe(d));
+  $('pg'+at).scrollIntoView({behavior:'instant',block:'start'});pvCount();}
+async function pvRender(d,force){const n=+d.dataset.n,w=d.clientWidth;if(!force&&d.dataset.w==w)return;d.dataset.w=w;
+  const pg=await PV.doc.getPage(n),vp0=pg.getViewport({scale:1}),dpr=Math.min(window.devicePixelRatio||1,2.5),sc=w*dpr/vp0.width,vp=pg.getViewport({scale:sc});
+  const c=document.createElement('canvas');c.width=vp.width;c.height=vp.height;
+  await pg.render({canvasContext:c.getContext('2d'),viewport:vp}).promise;
+  d.querySelector('canvas')?.remove();d.prepend(c);}
+function pvZoom(dz){PV.z=Math.max(1,Math.min(3,Math.round((PV.z+dz)*4)/4));$('pvb').style.setProperty('--pz',PV.z);
+  if(dz)$('pvb').querySelectorAll('.pg').forEach(d=>{const r=d.getBoundingClientRect();if(r.bottom>-800&&r.top<innerHeight+800)pvRender(d)});$('pvz').textContent=Math.round(PV.z*100)+'٪';}
+function pvCount(){const B=$('pvb').getBoundingClientRect();let cur=PV.from;$('pvb').querySelectorAll('.pg').forEach(d=>{const r=d.getBoundingClientRect();if(r.top<B.top+B.height/3)cur=+d.dataset.n});$('pvc').textContent=`صفحة ${ar(cur)} من ${ar(PV.doc?PV.doc.numPages:0)}`;}
+function closePDF(){$('pv').hidden=true;document.body.style.overflow='';if(PV.obs)PV.obs.disconnect();$('pvb').innerHTML='';}
+function initPV(){$('pvx').onclick=closePDF;$('pvp').onclick=()=>pvZoom(.25);$('pvm').onclick=()=>pvZoom(-.25);
+  let t=0;$('pvb').addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(pvCount,80)},{passive:true});
+  document.addEventListener('keydown',e=>{if(e.key=='Escape'&&!$('pv').hidden)closePDF()});
+  document.addEventListener('click',e=>{const a=e.target.closest('a.pvl');if(!a)return;e.preventDefault();openPDF(a.dataset.u,a.dataset.t,+a.dataset.f||0,+a.dataset.e||0,+a.dataset.p||0)},true);}
+const pvLink=(u,t,p,label,cls,f,e)=>`<a class="${cls||'ic'} pvl" href="${u}#page=${p||1}" data-u="${u}" data-t="${esc(t)}" data-p="${p||''}" data-f="${f||''}" data-e="${e||''}" target="_blank" rel="noopener">${label}</a>`;
+/* ===== المنظومات ===== */
+// صفحات منظومة الدمياطي (بشرحها) التي تذكر كل آية، مستخرجة بمطابقة نص الآيات المقتبسة
+const MZR={"2:34":[60],"15:31":[60],"20:116":[60],"17:61":[60],"18:50":[60],"7:11":[60],"2:59":[60,162],"7:162":[60,162],"2:136":[61],"3:84":[61],"2:249":[61],"2:217":[61],"3:103":[61],"5:89":[61],"24:59":[61],"2:219":[62],"2:266":[62],"3:118":[62],"24:61":[62],"3:167":[62],"48:11":[62],"2:61":[63],"7:33":[63],"41:15":[63,70],"46:20":[63],"3:112":[64],"3:181":[64],"4:155":[64],"22:40":[64,102,156],"3:195":[64],"16:97":[64],"10:61":[65],"14:38":[65],"42:31":[65],"29:22":[65],"4:57":[65],"5:119":[65,189],"9:100":[65,189,197],"64:9":[66,189],"65:11":[66],"98:8":[66],"3:15":[66],"4:13":[66],"6:128":[66],"9:68":[66,169],"9:72":[66,105,188],"14:23":[67],"29:58":[67],"48:5":[67,164],"57:12":[67,189],"58:22":[67],"98:6":[68],"4:59":[68],"4:95":[68],"9:20":[68],"61:11":[68],"8:72":[68],"49:15":[69],"7:148":[69],"13:41":[69],"17:99":[69],"30:37":[70],"32:27":[70],"46:33":[70],"67:19":[70],"34:9":[70,172],"6:148":[70,151,176],"16:35":[70,114,151,176],"7:72":[70],"29:15":[71],"7:13":[71],"29:50":[73],"16:119":[73,130],"7:153":[73],"10:31":[73],"27:64":[73],"35:3":[73],"34:24":[73],"46:3":[74],"21:70":[74],"37:98":[74],"12:40":[75,209],"53:23":[75],"7:71":[75,111,187],"22:56":[75],"29:52":[76,86,166],"34:43":[76,77],"24:12":[76],"46:11":[76],"5:110":[77],"11:7":[77,201],"46:7":[77],"61:6":[77],"7:116":[77],"28:36":[77,191],"74:24":[77],"31:29":[78],"13:2":[78],"35:13":[78],"40:85":[78],"48:23":[78],"33:38":[78],"35:43":[78],"3:126":[80],"8:10":[80],"6:5":[81],"26:6":[81],"16:125":[81],"53:30":[81],"28:37":[81],"28:85":[81],"29:63":[82,213],"2:164":[82],"2:259":[82],"16:65":[82],"57:17":[82],"22:5":[82],"2:120":[83],"13:37":[83,103],"2:145":[83],"3:61":[83],"9:54":[84],"9:80":[84,137],"9:84":[84,142],"9:55":[84],"10:74":[84,185,198],"7:101":[84,185,198],"17:68":[84],"17:69":[85],"17:75":[85],"17:86":[85],"30:16":[85],"29:23":[85],"39:63":[85],"23:25":[85],"23:38":[85],"26:35":[86],"7:110":[86],"13:43":[86],"35:25":[86],"7:200":[86],"41:36":[87],"16:98":[87],"2:73":[88],"2:272":[88],"2:197":[88,165],"2:215":[89],"4:127":[89],"3:60":[89],"2:147":[89],"6:114":[89],"10:94":[89],"3:71":[89],"3:99":[89],"6:34":[90],"35:4":[90],"3:184":[90],"4:128":[90],"4:129":[90],"5:93":[90],"10:72":[90,173],"64:12":[90],"9:3":[90],"5:49":[91],"11:57":[91,95],"24:54":[91],"2:137":[91],"3:20":[91],"11:3":[91],"5:99":[91],"24:29":[91],"2:33":[91],"21:110":[91],"64:4":[92,166],"31:16":[92],"16:127":[92],"11:17":[92,208,209],"11:109":[92],"40:50":[92],"4:40":[92],"3:104":[92],"4:97":[92],"4:113":[92],"6:101":[92],"9:35":[93],"11:42":[93],"27:55":[94],"7:81":[94],"26:166":[94],"32:9":[94,159],"9:16":[94],"2:214":[94],"3:142":[94],"9:39":[94],"11:49":[95],"3:44":[95],"11:100":[95],"12:102":[95],"7:37":[95,140],"40:74":[95],"71:15":[95],"31:20":[95],"6:6":[96,148,172,173],"27:86":[96],"6:159":[97],"6:108":[97],"24:64":[97,166],"7:86":[97,174],"20:71":[98,141],"26:49":[98,141],"7:189":[98],"4:1":[98],"41:52":[98,121],"46:10":[99],"9:94":[99],"18:57":[99],"32:22":[99],"3:86":[100],"2:213":[100],"2:253":[100,113],"4:153":[100],"43:3":[100],"12:2":[100],"28:30":[101],"33:39":[102],"4:6":[102],"51:30":[102],"6:83":[103],"20:113":[103],"15:53":[103],"51:28":[103],"31:14":[104],"29:8":[104],"61:12":[105,189],"4:149":[105],"33:54":[105],"6:102":[105],"40:62":[105],"6:160":[105],"7:205":[105],"6:63":[106],"6:151":[106],"40:11":[106],"42:44":[106],"30:30":[106,209,210],"10:64":[106,189],"11:99":[108],"37:85":[110],"26:70":[110],"6:125":[111,211],"6:145":[111],"9:95":[111,118],"22:30":[112],"33:33":[112],"5:32":[112],"57:25":[112],"6:112":[113],"2:20":[113],"2:220":[113],"6:137":[114],"42:8":[114,192],"10:16":[114],"7:79":[115],"34:4":[115],"26:5":[116,185],"36:20":[116],"28:20":[116],"52:37":[116],"26:57":[117],"4:152":[118],"4:162":[118],"9:42":[118],"4:62":[118],"9:74":[118],"9:56":[118],"9:96":[119],"20:53":[120],"43:10":[120],"2:176":[121],"22:53":[121],"6:124":[121],"14:2":[121],"23:77":[121],"34:46":[121],"35:7":[121,153],"35:10":[122],"38:26":[122],"57:20":[122,156],"37:102":[123],"56:79":[125],"9:87":[125,206],"9:93":[126,206],"18:97":[126],"10:17":[127,140],"16:41":[128],"16:110":[128,130],"22:26":[129],"2:125":[129],"5:41":[129],"3:30":[130],"16:111":[130],"13:33":[130],"74:38":[131],"40:45":[131],"19:14":[131],"21:84":[132],"31:15":[132],"25:70":[132],"54:54":[133],"5:101":[135],"3:155":[135],"2:235":[135],"2:225":[135],"9:5":[135],"9:27":[135],"9:91":[135],"9:99":[135],"9:102":[135],"18:58":[135],"6:133":[136],"28:59":[136],"2:35":[137],"2:58":[137,147,195],"5:108":[137],"9:24":[137],"61:5":[137,205],"63:6":[137],"16:107":[138],"2:264":[138],"9:37":[138],"5:67":[138],"3:12":[139],"3:197":[139],"13:18":[139,155],"2:206":[139],"22:72":[139],"24:57":[139],"22:13":[139],"39:72":[140],"6:144":[140],"6:157":[140],"39:32":[140],"18:15":[140],"7:123":[141],"9:125":[143],"40:6":[143],"18:61":[143],"12:109":[143],"22:46":[143],"40:82":[143,154],"30:9":[143,154],"35:44":[144,154],"40:21":[144,154],"25:43":[144],"35:12":[144],"16:14":[144],"10:14":[144],"35:39":[144],"6:165":[144],"39:41":[144],"10:108":[145],"17:15":[145],"27:92":[145],"68:30":[145],"52:18":[145],"51:16":[145],"84:25":[146],"7:161":[147],"4:135":[147],"5:8":[147],"5:42":[147],"10:47":[147],"10:54":[147],"40:78":[147],"22:42":[148],"13:34":[148],"20:127":[148],"21:11":[148],"23:32":[149],"25:20":[149],"21:7":[149],"20:10":[149],"27:7":[149],"27:12":[149],"59:4":[150],"8:13":[150],"2:101":[151],"3:117":[151],"6:123":[152],"10:12":[152],"29:32":[152],"7:83":[152],"8:52":[152],"8:39":[152],"2:193":[152],"11:11":[153],"67:12":[153],"57:7":[153],"17:9":[153],"15:1":[153],"27:1":[153,162],"26:7":[153],"31:10":[153],"31:7":[153],"40:28":[154],"40:34":[154],"39:47":[155],"5:36":[155],"6:50":[155],"11:31":[155],"29:64":[155],"6:32":[155],"6:70":[155],"22:74":[156],"7:12":[156],"15:32":[157],"29:44":[157],"15:75":[158],"16:12":[158,170],"16:79":[158],"16:78":[159],"68:4":[159],"14:32":[159],"28:72":[160],"29:66":[160],"16:55":[160],"30:34":[160],"29:62":[160,179],"34:39":[160,179],"35:31":[160],"40:59":[161,210],"15:85":[161],"20:15":[161],"22:7":[161],"42:43":[161],"31:17":[161],"2:23":[162],"11:13":[162],"2:97":[162],"16:89":[162,177],"16:102":[162],"46:12":[162],"10:57":[163],"17:82":[163],"2:196":[163],"2:184":[163,164],"2:236":[163],"2:180":[164],"2:271":[164],"8:29":[164],"11:8":[164],"2:80":[164],"12:20":[164],"2:203":[165],"22:28":[165],"27:87":[165],"10:66":[165],"22:18":[165],"13:15":[165],"30:26":[165],"19:93":[165],"21:19":[166],"27:65":[166],"17:55":[166],"2:116":[166],"6:12":[166],"10:55":[166,208],"57:1":[166],"16:52":[166],"31:26":[166],"59:24":[166],"4:170":[166],"54:43":[168],"4:91":[168],"5:37":[169],"11:39":[169],"42:45":[169],"6:99":[169],"2:248":[169],"3:13":[169],"3:49":[169],"10:67":[169],"11:103":[169],"13:3":[170],"13:4":[170],"14:5":[170],"16:11":[170],"20:128":[170,172,197],"26:158":[171],"29:24":[171],"30:21":[171,213],"30:24":[171,213],"31:31":[171],"32:26":[171,197],"34:19":[172],"39:21":[172,214],"39:42":[172],"6:95":[172],"50:36":[173],"18:31":[173],"10:9":[173],"7:43":[173],"10:104":[173],"27:91":[173],"7:143":[173],"7:84":[174],"27:69":[174],"27:14":[174],"3:137":[174],"16:36":[174],"10:39":[174],"10:73":[174],"11:115":[175],"12:90":[175],"9:120":[175],"12:56":[175],"3:171":[175],"7:170":[175],"11:20":[175],"11:113":[175],"29:41":[175],"13:30":[175],"14:10":[176],"46:31":[176],"15:74":[176],"16:84":[177],"22:22":[177],"32:20":[177],"40:67":[177],"18:37":[177],"35:11":[177],"26:154":[178],"26:186":[178],"37:53":[178],"23:82":[178],"56:47":[178],"34:35":[179],"37:59":[179],"6:29":[179],"23:37":[179],"28:82":[179],"40:22":[179],"64:6":[180],"44:19":[180],"70:24":[180],"51:19":[180],"65:2":[180,181],"2:232":[181],"3:52":[182],"11:62":[182],"14:9":[182,191],"41:5":[182],"22:17":[182],"2:62":[183],"6:71":[183],"7:188":[183],"13:16":[183],"21:66":[183],"34:42":[183],"10:106":[183],"25:55":[183],"7:58":[184],"6:46":[184],"6:65":[184],"6:105":[184],"6:55":[184,214],"43:23":[184],"34:34":[184],"15:11":[184],"36:30":[185],"21:2":[185],"7:100":[185,197],"30:59":[185],"40:35":[185],"15:12":[185],"26:200":[185],"4:47":[186],"27:68":[186],"3:119":[188],"4:109":[188],"9:111":[189],"6:16":[189],"42:22":[190],"35:32":[190],"27:16":[190],"4:94":[190],"2:105":[190],"57:21":[190],"3:174":[190],"10:75":[190],"7:103":[190],"6:130":[191],"39:71":[191,201],"21:31":[191],"7:45":[192],"16:66":[192],"23:21":[192],"16:72":[192],"29:67":[192],"22:62":[193],"31:30":[193],"21:91":[193],"11:94":[193],"37:175":[193],"37:179":[193],"43:64":[193],"3:51":[193],"46:26":[194],"80:11":[194],"3:77":[195],"2:174":[195],"3:47":[195],"7:113":[196],"7:120":[196],"7:82":[197],"27:56":[197],"23:23":[197],"9:117":[197],"10:13":[198],"30:33":[198],"39:8":[198],"39:49":[198],"11:58":[199],"12:65":[199],"12:68":[199,209,210],"12:31":[199],"12:50":[200],"12:66":[200],"12:80":[200],"12:96":[200],"15:65":[200],"11:81":[200],"21:93":[200],"23:53":[201],"39:73":[201],"25:59":[201],"32:4":[201],"7:54":[201],"10:3":[201],"57:4":[201],"17:85":[202],"28:60":[202],"42:36":[202],"29:61":[202],"40:7":[202],"42:5":[203],"52:48":[203],"52:47":[203],"51:59":[203],"2:123":[204],"2:49":[204],"14:6":[204],"7:141":[204],"2:18":[204],"2:102":[204],"5:20":[205],"2:54":[205],"21:22":[205],"9:31":[205],"10:18":[205],"28:68":[206],"30:40":[206],"6:97":[206],"63:8":[206],"59:13":[207],"59:14":[207],"7:94":[207],"7:131":[207],"8:34":[208],"28:13":[208],"28:57":[208],"10:60":[208],"2:243":[208,210],"7:187":[208,210],"12:21":[208,210],"12:38":[209,210],"13:1":[209],"16:38":[209,210],"40:61":[209,210],"40:57":[210],"59:11":[211],"10:100":[211],"11:36":[211],"13:23":[211],"16:31":[212],"35:33":[212],"24:22":[212],"2:83":[212],"2:177":[212],"4:36":[213],"8:41":[213],"59:7":[213],"31:25":[213],"30:22":[213],"30:23":[213],"30:28":[213],"9:11":[214],"10:24":[214],"52:45":[215]};
+const mzLine=(s,a)=>{const P=MZR[s+':'+a];return P?`<div class="mzr"><b>في منظومة الدمياطي:</b> ${P.map(n=>pvLink(MZU,MZT+' · منظومة الدمياطي',n,'ص '+ar(n),'ic',60,215)).join(' ')}</div>`:''};
+const MZ=[
+ {t:'منظومة السخاوي',s:'«هداية المرتاب وغاية الحفاظ والطلاب في تبيين متشابه الكتاب»',a:'علم الدين علي بن محمد السخاوي (ت ٦٤٣هـ)',d:'أول منظومة في هذا الفن، رتّب فيها الناظم المواضع المتشابهة على حروف المعجم: يُنظر إلى الحرف الأول من الكلمة المشكلة فيُطلب في بابه.',f:3,e:27},
+ {t:'منظومة النميري',s:'في ضبط المتشابهات',a:'النميري',d:'منظومة في ضبط المتشابه تبدأ بمقدمة الناظم، وتتناول المواضع التي يكثر فيها الاشتباه.',f:28,e:59},
+ {t:'منظومة الدمياطي',s:'في ضبط المتشابهات، مع بيان مواضعها',a:'الدمياطي',d:'منظومة مرتبة على حروف المعجم من باب الهمزة إلى باب الياء، وتحت كل بيت بيان معناه وذكر الآيات التي يشير إليها بسورها وأرقامها.',f:60,e:215},
+ {t:'فهرس الكلمات',s:'فهرس الألفاظ المتشابهة الواردة في المنظومات',a:'',d:'فهرس بالكلمات المشكلة وصفحاتها، يدلّك على البيت الذي يضبط الكلمة.',f:216,e:232}];
+const MZU='jami-almanzumat.pdf',MZT='جامع المنظومات في ضبط المتشابهات';
+function showN(){location.hash='n';if($('nv').innerHTML)return;
+  let h=`<div class="kh"><h2>جامع المنظومات في ضبط المتشابهات</h2><div class="by">جمع وإعداد الدكتور أحمد مصطفى متولي</div>
+  <div>يجمع منظومات العلماء في ضبط المتشابه اللفظي في كتاب واحد. اختر المنظومة لتقرأها داخل التطبيق، ويمكنك تكبير الصفحة أو تنزيل الكتاب كاملًا. وتظهر صفحات منظومة الدمياطي أيضًا تحت الآيات التي تشير إليها.</div>
+  <div class="ref"><b>المرجع:</b> متولي، أحمد مصطفى. «جامع المنظومات في ضبط المتشابهات». ٢٣٢ صفحة. والحقوق لجامعه. <a href="${MZU}" target="_blank" rel="noopener" download>تحميل الكتاب كاملًا (PDF)</a></div></div>`;
+  MZ.forEach((m,i)=>{h+=`<div class="ru mzc"><h3><span class="nb">${ar(i+1)}</span>${m.t}</h3><div class="bd"><div class="mzs">${m.s}</div>${m.a?`<div class="by">${m.a}</div>`:''}<div>${m.d}</div>
+    <div style="margin-top:8px">${pvLink(MZU,MZT+' · '+m.t,m.f,`اقرأ ${m.t} (ص ${ar(m.f)}–${ar(m.e)})`,'btn p',m.f,m.e)}</div></div></div>`});
+  $('nv').innerHTML=h;}
 /* ===== البطاقة المزخرفة ===== */
 const SITE='https://kmasskmass-svg.github.io/ithaf-al-huffaz/app.html';
 let SG=null,SB=null;
@@ -498,21 +711,21 @@ function onAct(e){const t=e.target;
   const f=t.closest('.fav');if(f)return toggleFav(+f.dataset.g);
   const sh=t.closest('.shr');if(sh)return openShare(+sh.dataset.g);
   const au=t.closest('.au');if(au)return play(au);
-  const l=t.closest('.lb');if(l&&t.closest('main'))return goV(+l.dataset.s,+l.dataset.a);}
+  const l=t.closest('.lb');if(l&&t.closest('main,#pop'))return goV(+l.dataset.s,+l.dataset.a);}
 function applySet(){document.documentElement.style.setProperty('--z',ST.get('z',1));document.documentElement.classList.toggle('dark',ST.get('dark',false));
   document.querySelector('meta[name=theme-color]').content=ST.get('dark',false)?'#0B3B31':'#0B5D4B';}
 function initExtra(){
   $('rc').innerHTML=RC.map(([v,n])=>`<option value="${v}">${n}</option>`).join('');$('rc').value=ST.get('rc',RC[0][0]);$('rc').onchange=()=>ST.set('rc',$('rc').value);
   $('dk').checked=ST.get('dark',false);$('dk').onchange=()=>{ST.set('dark',$('dk').checked);applySet()};
   const zz=d=>{ST.set('z',Math.round(Math.max(.8,Math.min(1.6,ST.get('z',1)+d))*10)/10);applySet()};$('z1').onclick=()=>zz(-.1);$('z2').onclick=()=>zz(.1);
-  initK();$('gb').onclick=()=>{$('set').hidden=!$('set').hidden};$('ubn').onclick=hardUpdate;
+  initPV();$('fab').onclick=()=>{setMode('h');scrollTo(0,0)};initK();$('gb').onclick=()=>{$('set').hidden=!$('set').hidden};$('ubn').onclick=hardUpdate;
   const abO=()=>{$('ab').hidden=false;$('ab').scrollTop=0},abC=()=>{$('ab').hidden=true;if(location.hash=='#about')history.replaceState(null,'',location.pathname)};
   $('abb').onclick=abO;$('abx').onclick=abC;$('ab').onclick=e=>{if(e.target.id=='ab')abC()};document.addEventListener('keydown',e=>{if(e.key=='Escape'){abC();$('sm').hidden=true}});if(location.hash=='#about')abO();
   $('zs').innerHTML='<option value="0">القرآن كله</option>'+HZ.map((h,i)=>`<option value="h${i+1}">الحزب ${h} (${D.names[PARTS[i][0]-1]} – ${D.names[PARTS[i][1]-1]})</option>`).join('')+D.names.map((n,i)=>`<option value="${i+1}">سورة ${n}</option>`).join('');
   $('zs').value=ST.get('zs','0');$('zs').onchange=()=>{ST.set('zs',$('zs').value);newQ()};$('zt').onchange=newQ;$('zn').onclick=newQ;
   $('smt').onchange=refreshShare;$('smw').onchange=refreshShare;$('sms').onclick=doShare;$('smd').onclick=doDown;
   $('smc').onclick=()=>{$('sm').hidden=true};$('sm').onclick=e=>{if(e.target.id=='sm')$('sm').hidden=true};
-  showDaily();}
+  }
 applySet();
 /* ===== مهارات الضبط (عرض د. محمد الجنايني) ===== */
 const KT=['عنوان اللقاء','','التعريف بالمتشابه اللفظي في القرآن','أبرز المؤلفات في المتشابه اللفظي','أبرز المؤلفات المعاصرة','أبرز المنظومات في المتشابه','من فوائد تكرار الآيات المتشابهات','أسباب الخطأ في الآيات المتشابهات','القواعد العامة لضبط المتشابهات','١. الترتيب الهجائي','٢. العناية بالآية الوحيدة','٣. الربط بين الموضع المتشابه واسم السورة','أمثلة على الربط باسم السورة','٤. الضبط بالزيادة للموضع المتأخر','٥. العناية بما تمتاز به السورة','التركيب اللفظي في آل عمران والأعراف','٦. الضبط بالحصر','٧. الضبط بالجملة الإنشائية','٨. الضبط بجمع الحرف الأول من أوائل الكلمات المتشابهة','٩. الضبط بالشعر','١٠. ربط الكلمة المتشابهة مع اسم السورة بالحركات','١١. الضبط بالتنكير والتعريف','١٢. الضبط بالتأمل للمعنى في الموضع المتشابه','١٣. الضبط بمعرفة موضع الآية في المصحف','وختامًا','شكرًا'];
@@ -526,12 +739,12 @@ function showK(){location.hash='k';if($('kv').innerHTML)return;
     if(KX[i])h+=`<div class="ex"><b>افتح أمثلتها في التطبيق:</b> ${KX[i].map(([s,a])=>`<button class="ic lb" data-s="${s}" data-a="${a}">${D.names[s-1]} ${ar(a)}</button>`).join('')}</div>`;
     h+='</div>';}
   $('kv').innerHTML=h;
-  $('kv').onclick=e=>{LBL=null;const c=e.target.closest('.chip[data-k]');if(c){$('sl'+c.dataset.k).scrollIntoView({behavior:'smooth'});return}
+  $('kv').onclick=e=>{LBL=null;const c=e.target.closest('.chip[data-k]');if(c){$('sl'+c.dataset.k).scrollIntoView({behavior:'instant',block:'start'});return}
     const im=e.target.closest('img[data-k]');if(im){LBL=null;openLB(+im.dataset.k)}};}
 let LBL=null,LBF=null;
 function openLB(i,list,f){if(list){LBL=list;LBF=f||null}else if(!LBL){LBL=Object.assign(Array.from({length:KN},(_,j)=>kimg(j+1)),{k:1});LBF=null}
   KI=Math.max(1,Math.min(LBL.length,i));$('lbi').src=LBL[KI-1];$('lbc').textContent=LBF?LBF(KI):`${ar(KI)} / ${ar(LBL.length)}`;$('lb').hidden=false;}
-function initK(){$('lbx').onclick=()=>{$('lb').hidden=true;$('lb').classList.remove('zm');if(LBL&&LBL.k==1)$('sl'+KI)?.scrollIntoView()};
+function initK(){$('lbx').onclick=()=>{$('lb').hidden=true;$('lb').classList.remove('zm');if(LBL&&LBL.k==1)$('sl'+KI)?.scrollIntoView({behavior:'instant',block:'start'})};
   $('lbn').onclick=()=>openLB(KI-1);$('lbp').onclick=()=>openLB(KI+1);
   $('lbz').onclick=()=>{$('lb').classList.toggle('zm');$('lbz').textContent=$('lb').classList.contains('zm')?'تصغير':'تكبير'};
   document.addEventListener('keydown',e=>{if($('lb').hidden)return;if(e.key=='Escape')$('lbx').click();if(e.key=='ArrowLeft')openLB(KI+1);if(e.key=='ArrowRight')openLB(KI-1)});
@@ -578,13 +791,13 @@ function showT(){location.hash='t';if($('tv').innerHTML)return;
   h+=blk('g','ع',TQG.t,TQG.sm,TQG.ul,null,-1);
   TQ.forEach((r,i)=>{h+=blk(i+1,ar(i+1),r[0],r[2],r[4],r[3],i)});
   $('tv').innerHTML=h;
-  $('tv').onclick=e=>{const g=e.target.closest('[data-go]');if(g){e.preventDefault();$('ru'+g.dataset.go).scrollIntoView({behavior:'smooth'});return}
+  $('tv').onclick=e=>{const g=e.target.closest('[data-go]');if(g){e.preventDefault();$('ru'+g.dataset.go).scrollIntoView({behavior:'instant',block:'start'});return}
     const b=e.target.closest('[data-tq]');if(b){const i=+b.dataset.tq,box=b.nextElementSibling;
       if(!box.innerHTML)box.innerHTML=tqPages(i).map((n,k)=>`<img loading="lazy" src="${tqImg(n)}" alt="صفحة ${ar(n-1)} من الكتاب" data-i="${i}" data-k="${k+1}">`).join('');
       box.hidden=!box.hidden;b.textContent=box.hidden?b.textContent.replace('إخفاء صفحات القاعدة','اقرأ القاعدة كاملة بأمثلتها من الكتاب'):b.textContent.replace('اقرأ القاعدة كاملة بأمثلتها من الكتاب','إخفاء صفحات القاعدة');return}
     const im=e.target.closest('.pgs img');if(im){const P=tqPages(+im.dataset.i);openLB(+im.dataset.k,P.map(tqImg),k=>`صفحة ${ar(P[k-1]-1)} من الكتاب`)}};}
 /* ===== التحديث التلقائي ===== */
-const BUILD='2026-11-23.4'; // يطابق v في version.json
+const BUILD='2026-11-23.6'; // يطابق v في version.json
 async function hardUpdate(){try{const ks=await caches.keys();await Promise.all(ks.filter(k=>k!='ithaf-books').map(k=>caches.delete(k)));
   const r=await navigator.serviceWorker?.getRegistration();if(r)await r.update();}catch(e){}
   location.replace(location.pathname+'?u='+Date.now()+location.hash);}
@@ -600,7 +813,7 @@ if('serviceWorker' in navigator&&isSecureContext){navigator.serviceWorker.regist
   setInterval(()=>{if(document.visibilityState=='visible')r.update().catch(()=>{})},30*60e3);}).catch(()=>{});}
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState=='visible')checkVer()});
 checkVer();
-fetch('data.json').then(r=>r.json()).then(d=>{D=d;
+Promise.all([fetch('data.json').then(r=>r.json()),fetch('ighatha.json').then(r=>r.json()).catch(()=>[])]).then(([d,ig])=>{D=d;initIG(ig);
   const opts=D.names.map((n,i)=>`<option value="${i+1}">${ar(i+1)}. ${n}</option>`).join('');$('ss').innerHTML=opts;$('vs').innerHTML=opts;
   NG=D.g.map(g=>loose(g.p.map(p=>p[2]).join(' | ')));
   $('load').hidden=true;$('app').hidden=false;
@@ -609,14 +822,19 @@ fetch('data.json').then(r=>r.json()).then(d=>{D=d;
   $('vp').onclick=()=>{let s=+$('vs').value,a=+$('va').value-1;if(a<1){if(s>1){s--;a=D.cnt[s-1]}else a=1}$('vs').value=s;$('va').value=a;showV()};
   $('vn').onclick=()=>{let s=+$('vs').value,a=+$('va').value+1;if(a>D.cnt[s-1]){if(s<114){s++;a=1}else a--}$('vs').value=s;$('va').value=a;showV()};
   $('qb').onclick=showQ;$('qx').onchange=()=>{xOpts();if($('qi').value.trim())showQ()};$('xm').onchange=xOpts;$('xw').onchange=xOpts;$('qi').onkeydown=e=>{if(e.key=='Enter')showQ()};
-  document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{ftype=c.dataset.t;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x==c));showS()});
+  document.querySelectorAll('#fl .chip').forEach(c=>c.onclick=()=>{ftype=c.dataset.t;document.querySelectorAll('#fl .chip').forEach(x=>x.classList.toggle('on',x==c));showS()});
   document.addEventListener('click',onAct);initExtra();
   const h=decodeURIComponent(location.hash.slice(1));
   if(h.startsWith('v=')){const[s,a]=h.slice(2).split(':');goV(+s,+a)}
   else if(h.startsWith('q=')){$('qi').value=h.slice(2);setMode('q')}
   else if(h.startsWith('x=')){$('qi').value=h.slice(2);$('qx').checked=true;setMode('q')}
-  else if(h=='z')setMode('z');else if(h.startsWith('t')){setMode('t');const n=h.split('=')[1];if(n)setTimeout(()=>document.getElementById('ru'+n)?.scrollIntoView(),300)}
-  else if(h.startsWith('k')){setMode('k');const n=+h.split('=')[1];if(n)setTimeout(()=>document.getElementById('sl'+n)?.scrollIntoView(),300)}else if(h=='f')setMode('f');
-  else{if(h.startsWith('s='))$('ss').value=+h.slice(2)||1;setMode('s')}
+  else if(h=='z')setMode('z');else if(h.startsWith('t')){setMode('t');const n=h.split('=')[1];if(n)setTimeout(()=>document.getElementById('ru'+n)?.scrollIntoView({behavior:'instant',block:'start'}),300)}
+  else if(h.startsWith('k')){setMode('k');const n=+h.split('=')[1];if(n)setTimeout(()=>document.getElementById('sl'+n)?.scrollIntoView({behavior:'instant',block:'start'}),300)}else if(h=='f')setMode('f');
+  else if(h=='q')setMode('q');
+  else if(h=='n')setMode('n');
+  else if(h.startsWith('i'))setMode('i');
+  else if(h.startsWith('m')){const[a,b]=(h.split('=')[1]||'1').split(':');$('ms').innerHTML||(0);setMode('m');$('ms').value=+a||1;$('ma').value=b||'';showM()}
+  else if(h.startsWith('s=')){$('ss').value=+h.slice(2)||1;setMode('s')}
+  else setMode('h');
 }).catch(()=>{$('load').textContent='تعذّر تحميل البيانات. افتح الصفحة من الموقع المنشور لا من ملف على الجهاز.'});
 </script></body></html>

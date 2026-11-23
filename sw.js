@@ -1,7 +1,7 @@
 // يحفظ التطبيق في الجهاز ليعمل دون اتصال. يأخذ من الشبكة أولًا، فيصل كل تحديث وحده.
-const V = 'ithaf-v4';
-const CORE = ['./', './index.html', './app.html', './data.json', './app.webmanifest', './version.json', './og-image.jpg',
-  './app-icon-192.png', './app-icon-512.png', './app-icon-180.png', './fonts/AmiriQuran.ttf', './fonts/Amiri-Regular.ttf', './fonts/Amiri-Bold.ttf'];
+const V = 'ithaf-v5';
+const CORE = ['./', './index.html', './app.html', './data.json', './app.webmanifest', './version.json', './ighatha.json', './quran.json', './og-image.jpg',
+  './app-icon-192.png', './app-icon-512.png', './app-icon-180.png', './pdf.min.mjs', './pdf.worker.min.mjs', './fonts/AmiriQuran.ttf', './fonts/Amiri-Regular.ttf', './fonts/Amiri-Bold.ttf'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(V).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
 });
@@ -12,6 +12,7 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   const u = new URL(e.request.url);
   if (e.request.method !== 'GET' || u.origin !== location.origin) return; // التلاوات من خارج الموقع لا تُحفظ
+  if (/\.pdf$/.test(u.pathname) && e.request.headers.has('range')) return; // طلبات الأجزاء تذهب إلى الشبكة مباشرة
   if (/\.pdf$/.test(u.pathname)) {
     // الكتب: تُحفظ بعد أول فتح لها، فتُقرأ بعدها دون اتصال
     e.respondWith(caches.open('ithaf-books').then(async c => {
