@@ -121,6 +121,25 @@ html.dark #ab .cta{background:#1f2a20}html.dark #ab .src{color:#aaa}
 #up b{color:#FFF3C9}#up ul{margin:4px 0;padding-right:20px}#up .row{display:flex;gap:8px;justify-content:center;margin-top:6px}
 #up .btn{background:#fff;color:var(--g)}#up .btn.p{background:var(--gold);border-color:var(--gold);color:#fff}
 #set .ub{font:inherit;font-size:15px;border-radius:8px;border:1px solid #E9D9A8;background:none;color:#fff;cursor:pointer;padding:0 10px}
+#kv .kh{background:var(--card);border:1.5px solid var(--gold);border-radius:14px;padding:12px 16px;margin-bottom:12px}
+#kv .kh h2{margin:0;color:var(--g);font-size:24px}#kv .kh .by{color:#7a5f20;margin:2px 0 6px}
+#kv .kh .ref{font-size:15px;color:#555;border-top:1px dashed var(--line);padding-top:6px;margin-top:6px}
+#kv .tocd{margin-top:6px}#kv .tocd summary{color:var(--g)}
+#kv .toc{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
+#kv .sl{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+#kv .sl .st{display:flex;justify-content:space-between;gap:8px;align-items:center;background:#F3ECD6;padding:4px 14px;color:var(--g);font-weight:bold}
+#kv .sl .st span{color:var(--gold);font-weight:normal;font-size:15px;white-space:nowrap}
+#kv .sl img{display:block;width:100%;aspect-ratio:16/9;cursor:zoom-in;background:#fff}
+#kv .ex{padding:6px 14px 8px;font-size:16px;border-top:1px dashed var(--line);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+#kv .ex b{color:#7a5f20;font-weight:normal}
+#lb{position:fixed;inset:0;background:#000e;z-index:25;display:flex;flex-direction:column}
+#lb .lbw{flex:1;overflow:auto;display:flex;align-items:center;justify-content:center;touch-action:pan-x pan-y pinch-zoom}
+#lb img{max-width:100%;max-height:100%;background:#fff}
+#lb.zm .lbw{align-items:flex-start;justify-content:flex-start}#lb.zm img{max-width:none;max-height:none;width:200%}
+#lb .lbb{display:flex;gap:8px;justify-content:center;align-items:center;padding:8px;color:#fff;flex-wrap:wrap}
+#lb .lbb .btn{background:#fff}#lb .lbb .btn.p{background:var(--gold);border-color:var(--gold);color:#fff}
+html.dark #kv .sl .st{background:#1f302a}html.dark #kv .kh .ref{color:#aaa}
+@media(max-width:600px){.tabs{overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}header .tabs>button{flex:0 0 auto;padding:5px 12px;font-size:15px}}
 #sm{position:fixed;inset:0;background:#000a;z-index:20;display:flex;align-items:center;justify-content:center;padding:12px}
 #sm .box{background:var(--card);border-radius:14px;max-width:520px;width:100%;max-height:96vh;overflow:auto;padding:12px 14px;text-align:center}
 #sm img{width:100%;border-radius:8px;border:1px solid var(--line);background:#eee;min-height:120px}
@@ -143,7 +162,7 @@ html.dark .sh{background:#0B5D4B}
 </style></head><body>
 <header><div class="top"><h1>إتحاف الحُفّاظ بمتشابه الألفاظ</h1><a href="./">الكتب PDF</a><button class="gear" id="abb" title="عن التطبيق وميزاته">عن التطبيق</button><button class="gear" id="gb" title="الإعدادات">⚙</button></div>
 <div id="set" hidden><span>حجم الخط <button class="zb" id="z1">−</button> <button class="zb" id="z2">+</button></span><label><input type="checkbox" id="dk"> الوضع الليلي</label><label>القارئ <select id="rc"></select></label><button class="ub" id="ubn" title="إن ظهر لك شيء قديم">تحديث التطبيق الآن</button></div>
-<div class="tabs"><button data-m="s" class="on">بالسورة</button><button data-m="v">بالآية</button><button data-m="q">بالنص</button><button data-m="z">اختبر حفظك</button><button data-m="f">المفضلة</button></div></header>
+<div class="tabs"><button data-m="s" class="on">بالسورة</button><button data-m="v">بالآية</button><button data-m="q">بالنص</button><button data-m="z">اختبر حفظك</button><button data-m="f">المفضلة</button><button data-m="k">مهارات الضبط</button></div></header>
 <main><div id="load">جارٍ تحميل البيانات…</div><div id="app" hidden>
 <div class="ctl" id="cs"><label>السورة</label><select id="ss"></select>
 <div class="chips" id="fl"><button class="chip on" data-t="">الكل</button><button class="chip" data-t="A">آيات متطابقة</button><button class="chip" data-t="B">عبارات متطابقة</button><button class="chip" data-t="C">اختلاف يسير</button></div></div>
@@ -151,7 +170,7 @@ html.dark .sh{background:#0B5D4B}
 <button class="btn" id="vp">‹ السابقة</button><button class="btn" id="vn">التالية ›</button></div>
 <div class="ctl" id="cq" hidden><input type="search" id="qi" placeholder="اكتب كلمات من الآية بلا تشكيل، مثل: ولا تقتلوا أولادكم"><label class="ex" title="تظهر المواضع التي فيها العبارة نفسها بكلماتها وترتيبها، دون زيادة حرف أو نقصه"><input type="checkbox" id="qx">العبارة بنصها</label><button class="btn p" id="qb">ابحث</button><div class="xo" id="xo"><label class="ex"><input type="checkbox" id="xm" checked>عرض طريقة الضبط</label><label class="ex"><input type="checkbox" id="xw">عرض التوجيه</label></div></div>
 <div class="ctl" id="cz" hidden><label>النطاق</label><select id="zs"></select><label>نوع السؤال</label><select id="zt"><option value="m">منوّع</option><option value="w">في أي موضع؟</option><option value="c">أكمل الكلمة</option></select><button class="btn p" id="zn">سؤال جديد</button><span class="score" id="zsc"></span></div>
-<div id="daily"></div><div class="info" id="info"></div><div id="res"></div></div></main>
+<div id="kv" hidden></div><div id="daily"></div><div class="info" id="info"></div><div id="res"></div></div></main>
 <div id="ab" hidden><div class="box"><div class="abh"><button class="x" id="abx">إغلاق ✕</button><h2>إتحاف الحُفّاظ بمتشابه الألفاظ</h2><p>التطبيق التفاعلي للمتشابه اللفظي في القرآن الكريم</p></div><div class="abb">
 <h3>عن التطبيق</h3>
 <p>تطبيق يجمع المتشابه اللفظي في القرآن الكريم سورةً سورة، ويضع أمام كل موضع نظائره بنصها، ويبيّن الفرق بينها بالألوان، ويذكر طريقة تمييز كل موضع من غيره، مع توجيه العلماء لسبب اختلاف اللفظ.</p>
@@ -178,6 +197,7 @@ html.dark .sh{background:#0B5D4B}
 <li><b>المفضلة ☆:</b> اضغط النجمة على أي مجموعة تُشكل عليك لتجدها في تبويب «المفضلة»، وتُحفظ في جهازك.</li>
 <li><b>اختبر حفظك:</b> أسئلة من نوعين: «في أي موضع وردت الآية بهذا اللفظ؟» و«أكمل الكلمة»، على القرآن كله أو على حزب أو سورة، مع النتيجة وطريقة الضبط بعد كل جواب.</li>
 <li><b>متشابه اليوم:</b> مجموعة جديدة كل يوم في أعلى تبويب السورة، تصلح للمراجعة اليومية وللإرسال في مجموعات التحفيظ.</li>
+<li><b>مهارات الضبط:</b> تبويب فيه عرض الدكتور محمد عمر الجنايني «مهارات ضبط المتشابه اللفظي في القرآن الكريم» بشرائحه كاملة: تعريف المتشابه ومؤلفاته، وأسباب الخطأ فيه، وثلاث عشرة قاعدة لضبطه بأمثلتها.</li>
 <li><b>الإعدادات ⚙:</b> تكبير الخط وتصغيره، والوضع الليلي، واختيار القارئ.</li>
 <li><b>يتحدث تلقائيًّا:</b> كلما صدرت نسخة جديدة وصلتك وحدها عند فتح التطبيق مع الاتصال بالإنترنت، وتظهر لك رسالة بما أُضيف. وإن رأيت شيئًا قديمًا فاضغط ⚙ ثم «تحديث التطبيق الآن».</li>
 <li><b>يعمل بلا إنترنت:</b> من قائمة المتصفح في الجوال اختر «إضافة إلى الشاشة الرئيسية» فيصير تطبيقًا يعمل دون اتصال، وكل جزء من الكتاب تفتحه مرة يبقى محفوظًا.</li>
@@ -200,6 +220,7 @@ html.dark .sh{background:#0B5D4B}
 <p class="src" style="text-align:center;margin-top:14px">نسأل الله أن ينفع به، وأن يجعله خالصًا لوجهه الكريم.</p>
 </div></div></div>
 <div id="up" hidden></div>
+<div id="lb" hidden><div class="lbw" id="lbw"><img id="lbi" alt=""></div><div class="lbb"><button class="btn" id="lbn">‹ السابقة</button><span id="lbc"></span><button class="btn" id="lbp">التالية ›</button><button class="btn" id="lbz">تكبير</button><button class="btn p" id="lbx">إغلاق ✕</button></div></div>
 <div id="sm" hidden><div class="box"><img id="smi" alt="البطاقة"><div class="row"><label class="ex"><input type="checkbox" id="smt" checked>طريقة الضبط</label><label class="ex"><input type="checkbox" id="smw">التوجيه</label></div><div class="row"><button class="btn p" id="sms">مشاركة</button><button class="btn" id="smd">تحميل الصورة</button><button class="btn" id="smc">إغلاق</button></div></div></div>
 <footer>إعداد: كليب بن أحمد بن ضيف الله الزهراني · المصادر: درة التنزيل للإسكافي، البرهان للكرماني، ملاك التأويل لابن الزبير</footer>
 <script>
@@ -312,8 +333,8 @@ function moreH(){const b=document.querySelector('.more');if(b)b.remove();
   if(shown<HL.length)$('res').insertAdjacentHTML('beforeend','<button class="btn p more" onclick="moreH()">عرض المزيد</button>');}
 function xOpts(){const x=$('qx').checked;$('xo').classList.toggle('on',x);
   $('res').classList.toggle('notm',x&&!$('xm').checked);$('res').classList.toggle('notw',x&&!$('xw').checked);}
-function setMode(m){mode=m;if(m!='q')$('res').classList.remove('notm','notw');document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.m==m));
-  $('cs').hidden=m!='s';$('cv').hidden=m!='v';$('cq').hidden=m!='q';$('cz').hidden=m!='z';$('daily').hidden=m!='s';({s:showS,v:showV,q:showQ,z:showZ,f:showF})[m]();}
+function setMode(m){mode=m;if(m!='q')$('res').classList.remove('notm','notw');document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.m==m));document.querySelector('.tabs .on')?.scrollIntoView({inline:'nearest',block:'nearest'});
+  $('cs').hidden=m!='s';$('cv').hidden=m!='v';$('cq').hidden=m!='q';$('cz').hidden=m!='z';$('daily').hidden=m!='s';$('kv').hidden=m!='k';$('info').hidden=m=='k';$('res').hidden=m=='k';({s:showS,v:showV,q:showQ,z:showZ,f:showF,k:showK})[m]();}
 function goV(s,a){$('vs').value=s;$('va').value=a;setMode('v');scrollTo(0,0);}
 /* ===== التخزين في الجهاز ===== */
 const ST={get(k,d){try{const v=localStorage.getItem('ithaf_'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('ithaf_'+k,JSON.stringify(v))}catch(e){}}};
@@ -466,7 +487,7 @@ function initExtra(){
   $('rc').innerHTML=RC.map(([v,n])=>`<option value="${v}">${n}</option>`).join('');$('rc').value=ST.get('rc',RC[0][0]);$('rc').onchange=()=>ST.set('rc',$('rc').value);
   $('dk').checked=ST.get('dark',false);$('dk').onchange=()=>{ST.set('dark',$('dk').checked);applySet()};
   const zz=d=>{ST.set('z',Math.round(Math.max(.8,Math.min(1.6,ST.get('z',1)+d))*10)/10);applySet()};$('z1').onclick=()=>zz(-.1);$('z2').onclick=()=>zz(.1);
-  $('gb').onclick=()=>{$('set').hidden=!$('set').hidden};$('ubn').onclick=hardUpdate;
+  initK();$('gb').onclick=()=>{$('set').hidden=!$('set').hidden};$('ubn').onclick=hardUpdate;
   const abO=()=>{$('ab').hidden=false;$('ab').scrollTop=0},abC=()=>{$('ab').hidden=true;if(location.hash=='#about')history.replaceState(null,'',location.pathname)};
   $('abb').onclick=abO;$('abx').onclick=abC;$('ab').onclick=e=>{if(e.target.id=='ab')abC()};document.addEventListener('keydown',e=>{if(e.key=='Escape'){abC();$('sm').hidden=true}});if(location.hash=='#about')abO();
   $('zs').innerHTML='<option value="0">القرآن كله</option>'+HZ.map((h,i)=>`<option value="h${i+1}">الحزب ${h} (${D.names[PARTS[i][0]-1]} – ${D.names[PARTS[i][1]-1]})</option>`).join('')+D.names.map((n,i)=>`<option value="${i+1}">سورة ${n}</option>`).join('');
@@ -475,8 +496,29 @@ function initExtra(){
   $('smc').onclick=()=>{$('sm').hidden=true};$('sm').onclick=e=>{if(e.target.id=='sm')$('sm').hidden=true};
   showDaily();}
 applySet();
+/* ===== مهارات الضبط (عرض د. محمد الجنايني) ===== */
+const KT=['عنوان اللقاء','','التعريف بالمتشابه اللفظي في القرآن','أبرز المؤلفات في المتشابه اللفظي','أبرز المؤلفات المعاصرة','أبرز المنظومات في المتشابه','من فوائد تكرار الآيات المتشابهات','أسباب الخطأ في الآيات المتشابهات','القواعد العامة لضبط المتشابهات','١. الترتيب الهجائي','٢. العناية بالآية الوحيدة','٣. الربط بين الموضع المتشابه واسم السورة','أمثلة على الربط باسم السورة','٤. الضبط بالزيادة للموضع المتأخر','٥. العناية بما تمتاز به السورة','التركيب اللفظي في آل عمران والأعراف','٦. الضبط بالحصر','٧. الضبط بالجملة الإنشائية','٨. الضبط بجمع الحرف الأول من أوائل الكلمات المتشابهة','٩. الضبط بالشعر','١٠. ربط الكلمة المتشابهة مع اسم السورة بالحركات','١١. الضبط بالتنكير والتعريف','١٢. الضبط بالتأمل للمعنى في الموضع المتشابه','١٣. الضبط بمعرفة موضع الآية في المصحف','وختامًا','شكرًا'];
+const KX={10:[[2,18],[2,171],[2,125],[22,26],[3,167],[48,11]],13:[[2,80],[3,24],[21,16],[44,38]],21:[[37,47],[56,19],[37,59],[44,35]]};
+const KN=KT.length,kimg=i=>`skills/s${String(i).padStart(2,'0')}.webp`;let KI=1;
+function showK(){location.hash='k';if($('kv').innerHTML)return;
+  let h=`<div class="kh"><h2>مهارات ضبط المتشابه اللفظي في القرآن الكريم</h2><div class="by">تقديم الدكتور محمد عمر الجنايني، محاضر القراءات العشر</div>
+  <div>عرض تدريبي في التعريف بالمتشابه اللفظي ومؤلفاته، وأسباب الخطأ فيه، والقواعد العامة والخاصة لضبطه. اضغط على أي شريحة لتكبيرها، وأدِر الجوال أفقيًّا لتراها أوضح.</div>
+  <details class="tocd"><summary>فهرس الشرائح</summary><div class="toc">${KT.map((t,i)=>t&&i&&i<KN-1?`<button class="chip" data-k="${i+1}">${t.replace(/^(.{0,34}).*$/,(m,a)=>a.length<t.length?a+'…':a)}</button>`:'').join('')}</div></details><div class="ref"><b>المرجع:</b> الجنايني، محمد عمر. «مهارات ضبط المتشابه اللفظي في القرآن الكريم» (عرض تقديمي في ٢٦ شريحة). نُقل هنا بنصه وهيئته دون تصرف، والحقوق لصاحبه. <a href="skills/mharat-dabt-al-mutashabih.pdf" target="_blank" rel="noopener">تحميل العرض الأصلي (PDF)</a></div></div>`;
+  for(let i=1;i<=KN;i++){h+=`<div class="sl" id="sl${i}"><div class="st">${KT[i-1]||'&nbsp;'}<span>شريحة ${ar(i)} من ${ar(KN)}</span></div><img loading="lazy" src="${kimg(i)}" alt="${KT[i-1]||'شريحة '+i}" data-k="${i}">`;
+    if(KX[i])h+=`<div class="ex"><b>افتح أمثلتها في التطبيق:</b> ${KX[i].map(([s,a])=>`<button class="ic lb" data-s="${s}" data-a="${a}">${D.names[s-1]} ${ar(a)}</button>`).join('')}</div>`;
+    h+='</div>';}
+  $('kv').innerHTML=h;
+  $('kv').onclick=e=>{const c=e.target.closest('.chip[data-k]');if(c){$('sl'+c.dataset.k).scrollIntoView({behavior:'smooth'});return}
+    const im=e.target.closest('img[data-k]');if(im)openLB(+im.dataset.k);};}
+function openLB(i){KI=Math.max(1,Math.min(KN,i));$('lbi').src=kimg(KI);$('lbc').textContent=`${ar(KI)} / ${ar(KN)}`;$('lb').hidden=false;}
+function initK(){$('lbx').onclick=()=>{$('lb').hidden=true;$('lb').classList.remove('zm');$('sl'+KI)?.scrollIntoView()};
+  $('lbn').onclick=()=>openLB(KI-1);$('lbp').onclick=()=>openLB(KI+1);
+  $('lbz').onclick=()=>{$('lb').classList.toggle('zm');$('lbz').textContent=$('lb').classList.contains('zm')?'تصغير':'تكبير'};
+  document.addEventListener('keydown',e=>{if($('lb').hidden)return;if(e.key=='Escape')$('lbx').click();if(e.key=='ArrowLeft')openLB(KI+1);if(e.key=='ArrowRight')openLB(KI-1)});
+  let x0=null;$('lbw').addEventListener('touchstart',e=>{x0=e.touches.length==1&&!$('lb').classList.contains('zm')?e.touches[0].clientX:null},{passive:true});
+  $('lbw').addEventListener('touchend',e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>60)openLB(KI+(dx>0?1:-1));x0=null});}
 /* ===== التحديث التلقائي ===== */
-const BUILD='2026-11-23.2'; // يطابق v في version.json
+const BUILD='2026-11-23.3'; // يطابق v في version.json
 async function hardUpdate(){try{const ks=await caches.keys();await Promise.all(ks.filter(k=>k!='ithaf-books').map(k=>caches.delete(k)));
   const r=await navigator.serviceWorker?.getRegistration();if(r)await r.update();}catch(e){}
   location.replace(location.pathname+'?u='+Date.now()+location.hash);}
@@ -507,7 +549,7 @@ fetch('data.json').then(r=>r.json()).then(d=>{D=d;
   if(h.startsWith('v=')){const[s,a]=h.slice(2).split(':');goV(+s,+a)}
   else if(h.startsWith('q=')){$('qi').value=h.slice(2);setMode('q')}
   else if(h.startsWith('x=')){$('qi').value=h.slice(2);$('qx').checked=true;setMode('q')}
-  else if(h=='z')setMode('z');else if(h=='f')setMode('f');
+  else if(h=='z')setMode('z');else if(h.startsWith('k')){setMode('k');const n=+h.split('=')[1];if(n)setTimeout(()=>document.getElementById('sl'+n)?.scrollIntoView(),300)}else if(h=='f')setMode('f');
   else{if(h.startsWith('s='))$('ss').value=+h.slice(2)||1;setMode('s')}
 }).catch(()=>{$('load').textContent='تعذّر تحميل البيانات. افتح الصفحة من الموقع المنشور لا من ملف على الجهاز.'});
 </script></body></html>
