@@ -99,6 +99,24 @@ footer{text-align:center;color:#888;font-size:14px;padding:16px}
 .opt.no{background:#FBE3E1;border-color:var(--red);color:var(--red)}
 .qr{margin-top:10px;padding:8px 12px;border-radius:10px;background:#fffefa;border:1px dashed var(--gold)}
 .score{color:#7a5f20;font-weight:bold}
+#ab{position:fixed;inset:0;background:#000a;z-index:21;display:flex;align-items:flex-start;justify-content:center;padding:14px 10px;overflow:auto}
+#ab .box{background:var(--card);border-radius:16px;max-width:760px;width:100%;border:2px solid var(--gold);box-shadow:0 8px 30px #0005;overflow:hidden}
+#ab .abh{background:var(--g);color:#FFF3C9;text-align:center;padding:40px 16px 10px;border-bottom:4px double var(--gold);position:relative}
+#ab .abh h2{margin:0;font-size:28px}#ab .abh p{margin:2px 0 0;color:#fff;font-size:16px}
+#ab .x{position:absolute;top:10px;left:12px;background:none;border:1px solid #E9D9A8;color:#FFF3C9;border-radius:8px;font:inherit;font-size:16px;cursor:pointer;padding:0 10px}
+#ab .abb{padding:6px 20px 18px;font-size:18px}
+#ab h3{color:var(--g);font-size:21px;margin:18px 0 6px;border-bottom:1px solid var(--line);padding-bottom:2px}
+#ab h3::before{content:'✦ ';color:var(--gold)}
+#ab ul,#ab ol{margin:4px 0;padding-right:22px}#ab li{margin:5px 0}
+#ab li b{color:var(--blue)}
+#ab .src{color:#555;font-size:16px}
+#ab .cta{background:#FFF7DF;border:1.5px dashed var(--gold);border-radius:12px;padding:12px 16px;margin-top:18px;text-align:center}
+#ab .cta p{margin:4px 0}
+#ab .ph{font-size:24px;font-weight:bold;color:var(--g);direction:ltr;unicode-bidi:embed;letter-spacing:1px}
+#ab .cb{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+#ab .cb a{text-decoration:none}
+#ab .wa{background:#1F8A4C;border-color:#1F8A4C;color:#fff}
+html.dark #ab .cta{background:#1f2a20}html.dark #ab .src{color:#aaa}
 #sm{position:fixed;inset:0;background:#000a;z-index:20;display:flex;align-items:center;justify-content:center;padding:12px}
 #sm .box{background:var(--card);border-radius:14px;max-width:520px;width:100%;max-height:96vh;overflow:auto;padding:12px 14px;text-align:center}
 #sm img{width:100%;border-radius:8px;border:1px solid var(--line);background:#eee;min-height:120px}
@@ -117,9 +135,9 @@ html.dark .tm b,html.dark .chip,html.dark .daily>summary,html.dark .score{color:
 html.dark .q .hx{background:#5a4a1c}
 html.dark .opt.ok{background:#173d30}html.dark .opt.no{background:#43201d}
 html.dark .sh{background:#0B5D4B}
-@media(max-width:600px){.top h1{font-size:20px}.head,.q{font-size:20px}body{font-size:17px}.tabs button{font-size:15px;padding:5px 2px}.ch{flex-wrap:wrap}}
+@media(max-width:600px){.top{gap:6px}.top a,.gear{font-size:14px;padding:1px 7px}.top h1{font-size:18px}.head,.q{font-size:20px}body{font-size:17px}.tabs{gap:3px}.tabs button{font-size:14px;padding:5px 1px;white-space:nowrap}#ab .abh h2{font-size:23px}#ab .abb{padding:4px 14px 16px;font-size:17px}.ch{flex-wrap:wrap}}
 </style></head><body>
-<header><div class="top"><h1>إتحاف الحُفّاظ بمتشابه الألفاظ</h1><a href="./">الكتب PDF</a><button class="gear" id="gb" title="الإعدادات">⚙</button></div>
+<header><div class="top"><h1>إتحاف الحُفّاظ بمتشابه الألفاظ</h1><a href="./">الكتب PDF</a><button class="gear" id="abb" title="عن التطبيق وميزاته">عن التطبيق</button><button class="gear" id="gb" title="الإعدادات">⚙</button></div>
 <div id="set" hidden><span>حجم الخط <button class="zb" id="z1">−</button> <button class="zb" id="z2">+</button></span><label><input type="checkbox" id="dk"> الوضع الليلي</label><label>القارئ <select id="rc"></select></label></div>
 <div class="tabs"><button data-m="s" class="on">بالسورة</button><button data-m="v">بالآية</button><button data-m="q">بالنص</button><button data-m="z">اختبر حفظك</button><button data-m="f">المفضلة</button></div></header>
 <main><div id="load">جارٍ تحميل البيانات…</div><div id="app" hidden>
@@ -130,6 +148,52 @@ html.dark .sh{background:#0B5D4B}
 <div class="ctl" id="cq" hidden><input type="search" id="qi" placeholder="اكتب كلمات من الآية بلا تشكيل، مثل: ولا تقتلوا أولادكم"><label class="ex" title="تظهر المواضع التي فيها العبارة نفسها بكلماتها وترتيبها، دون زيادة حرف أو نقصه"><input type="checkbox" id="qx">العبارة بنصها</label><button class="btn p" id="qb">ابحث</button><div class="xo" id="xo"><label class="ex"><input type="checkbox" id="xm" checked>عرض طريقة الضبط</label><label class="ex"><input type="checkbox" id="xw">عرض التوجيه</label></div></div>
 <div class="ctl" id="cz" hidden><label>النطاق</label><select id="zs"></select><label>نوع السؤال</label><select id="zt"><option value="m">منوّع</option><option value="w">في أي موضع؟</option><option value="c">أكمل الكلمة</option></select><button class="btn p" id="zn">سؤال جديد</button><span class="score" id="zsc"></span></div>
 <div id="daily"></div><div class="info" id="info"></div><div id="res"></div></div></main>
+<div id="ab" hidden><div class="box"><div class="abh"><button class="x" id="abx">إغلاق ✕</button><h2>إتحاف الحُفّاظ بمتشابه الألفاظ</h2><p>التطبيق التفاعلي للمتشابه اللفظي في القرآن الكريم</p></div><div class="abb">
+<h3>عن التطبيق</h3>
+<p>تطبيق يجمع المتشابه اللفظي في القرآن الكريم سورةً سورة، ويضع أمام كل موضع نظائره بنصها، ويبيّن الفرق بينها بالألوان، ويذكر طريقة تمييز كل موضع من غيره، مع توجيه العلماء لسبب اختلاف اللفظ.</p>
+<p class="src">مادته من كتاب «إتحاف الحُفّاظ بمتشابه الألفاظ» في سبعة أجزاء على تحزيب الصحابة رضي الله عنهم (فمي بشوق)، والتوجيه من: «درة التنزيل وغرة التأويل» للخطيب الإسكافي، و«البرهان في توجيه متشابه القرآن» للكرماني، و«ملاك التأويل» لابن الزبير الغرناطي.</p>
+<h3>أهميته</h3>
+<ul>
+<li>المتشابه اللفظي أكثر ما يقع فيه الخطأ عند الحافظ، فيدخل عليه موضع في موضع، وهذا التطبيق يضع المواضع المتشابهة أمام عينه في مكان واحد.</li>
+<li>لا يكتفي بجمع المواضع، بل يدلّ على الكلمة الفارقة ويعطي ضابطًا يُحفظ به كل موضع.</li>
+<li>يربط الحفظ بالفهم، فيعرف الحافظ لماذا جاء اللفظ هنا هكذا وهناك هكذا، فيثبت في ذهنه.</li>
+<li>يعين المعلّم في الحلقة على تنبيه طلابه إلى مواضع الاشتباه قبل وقوعهم فيها.</li>
+</ul>
+<h3>ميزاته وطريقة استعمالها</h3>
+<ul>
+<li><b>بالسورة:</b> اختر سورة فتظهر كل متشابهاتها، ويمكنك أن تقصرها على نوع واحد: الآيات المتطابقة، أو العبارات المتطابقة، أو ما فيه اختلاف يسير.</li>
+<li><b>بالآية:</b> اختر السورة ورقم الآية فتظهر المجموعات التي تدخل فيها، وتنتقل بين الآيات بزرَّي «السابقة» و«التالية».</li>
+<li><b>بالنص:</b> اكتب كلمات من الآية بلا تشكيل فتظهر المواضع التي فيها هذه الكلمات.</li>
+<li><b>العبارة بنصها:</b> فعّل هذا الخيار في البحث بالنص فلا يظهر إلا ما ورد بالعبارة نفسها بكلماتها وترتيبها، مرتبًا على ترتيب المصحف، مع خيارَي عرض طريقة الضبط والتوجيه.</li>
+<li><b>الألوان:</b> الكلمات الملوّنة هي موضع الاشتباه أو الفرق بين المواضع، و◆ تدل على الموضع الذي تبحث فيه.</li>
+<li><b>التمييز (طريقة الضبط):</b> تحت كل موضع ما يميّزه من نظائره، كالكلمة التي قبله أو بعده.</li>
+<li><b>التوجيه:</b> في أسفل كل مجموعة توجيه الإسكافي والكرماني وابن الزبير لسبب اختلاف اللفظ، اضغط على اسم أحدهم ليظهر كلامه.</li>
+<li><b>في الكتاب:</b> يفتح ملف الجزء على الصفحة التي ذُكر فيها الموضع.</li>
+<li><b>الاستماع ▶:</b> يُسمعك الآية بصوت قارئ تختاره من الإعدادات ⚙، ويحتاج إلى اتصال بالإنترنت.</li>
+<li><b>مشاركة:</b> يصنع بطاقة مزخرفة فيها المتشابه مع اسم الكتاب، ترسلها في واتساب أو تيليجرام، وتختار أن يظهر فيها طريقة الضبط أو التوجيه.</li>
+<li><b>المفضلة ☆:</b> اضغط النجمة على أي مجموعة تُشكل عليك لتجدها في تبويب «المفضلة»، وتُحفظ في جهازك.</li>
+<li><b>اختبر حفظك:</b> أسئلة من نوعين: «في أي موضع وردت الآية بهذا اللفظ؟» و«أكمل الكلمة»، على القرآن كله أو على حزب أو سورة، مع النتيجة وطريقة الضبط بعد كل جواب.</li>
+<li><b>متشابه اليوم:</b> مجموعة جديدة كل يوم في أعلى تبويب السورة، تصلح للمراجعة اليومية وللإرسال في مجموعات التحفيظ.</li>
+<li><b>الإعدادات ⚙:</b> تكبير الخط وتصغيره، والوضع الليلي، واختيار القارئ.</li>
+<li><b>يعمل بلا إنترنت:</b> من قائمة المتصفح في الجوال اختر «إضافة إلى الشاشة الرئيسية» فيصير تطبيقًا يعمل دون اتصال، وكل جزء من الكتاب تفتحه مرة يبقى محفوظًا.</li>
+</ul>
+<h3>كيف تستفيد منه</h3>
+<ol>
+<li>قبل أن تبدأ حفظ سورة، افتحها في تبويب «بالسورة» وتعرّف متشابهاتها، فتحفظ وأنت منتبه لها.</li>
+<li>عند المراجعة، اختبر نفسك في السورة أو الحزب الذي تراجعه من تبويب «اختبر حفظك».</li>
+<li>كل موضع أخطأت فيه أضفه إلى المفضلة، وارجع إليه حتى يثبت.</li>
+<li>اقرأ التوجيه، فمعرفة سبب اختلاف اللفظ أثبت للحفظ من التكرار وحده.</li>
+<li>إذا اشتبهت عليك عبارة، فابحث عنها بنصها لترى كل مواضعها مرتبة.</li>
+</ol>
+<div class="cta">
+<h3 style="border:0;margin-top:4px">دعوة للمشاركة في التطوير</h3>
+<p>هذا عمل بشري لا يخلو من خطأ أو نقص. فإن وجدت خطأً في نص أو موضع أو توجيه، أو كان عندك اقتراح يزيد التطبيق نفعًا، فتواصل مع مصمم التطبيق، فالدال على الخير كفاعله.</p>
+<p><b>كليب بن أحمد بن ضيف الله الزهراني</b></p>
+<p class="ph">0550668851</p><p class="src">المملكة العربية السعودية</p>
+<div class="cb"><a class="btn wa" href="https://wa.me/966550668851?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A8%D8%AE%D8%B5%D9%88%D8%B5%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%C2%AB%D8%A5%D8%AA%D8%AD%D8%A7%D9%81%20%D8%A7%D9%84%D8%AD%D9%81%D8%A7%D8%B8%C2%BB%3A%20" target="_blank" rel="noopener">مراسلة عبر واتساب</a><a class="btn" href="tel:+966550668851">اتصال</a></div>
+</div>
+<p class="src" style="text-align:center;margin-top:14px">نسأل الله أن ينفع به، وأن يجعله خالصًا لوجهه الكريم.</p>
+</div></div></div>
 <div id="sm" hidden><div class="box"><img id="smi" alt="البطاقة"><div class="row"><label class="ex"><input type="checkbox" id="smt" checked>طريقة الضبط</label><label class="ex"><input type="checkbox" id="smw">التوجيه</label></div><div class="row"><button class="btn p" id="sms">مشاركة</button><button class="btn" id="smd">تحميل الصورة</button><button class="btn" id="smc">إغلاق</button></div></div></div>
 <footer>إعداد: كليب بن أحمد بن ضيف الله الزهراني · المصادر: درة التنزيل للإسكافي، البرهان للكرماني، ملاك التأويل لابن الزبير</footer>
 <script>
@@ -397,6 +461,8 @@ function initExtra(){
   $('dk').checked=ST.get('dark',false);$('dk').onchange=()=>{ST.set('dark',$('dk').checked);applySet()};
   const zz=d=>{ST.set('z',Math.round(Math.max(.8,Math.min(1.6,ST.get('z',1)+d))*10)/10);applySet()};$('z1').onclick=()=>zz(-.1);$('z2').onclick=()=>zz(.1);
   $('gb').onclick=()=>{$('set').hidden=!$('set').hidden};
+  const abO=()=>{$('ab').hidden=false;$('ab').scrollTop=0},abC=()=>{$('ab').hidden=true;if(location.hash=='#about')history.replaceState(null,'',location.pathname)};
+  $('abb').onclick=abO;$('abx').onclick=abC;$('ab').onclick=e=>{if(e.target.id=='ab')abC()};document.addEventListener('keydown',e=>{if(e.key=='Escape'){abC();$('sm').hidden=true}});if(location.hash=='#about')abO();
   $('zs').innerHTML='<option value="0">القرآن كله</option>'+HZ.map((h,i)=>`<option value="h${i+1}">الحزب ${h} (${D.names[PARTS[i][0]-1]} – ${D.names[PARTS[i][1]-1]})</option>`).join('')+D.names.map((n,i)=>`<option value="${i+1}">سورة ${n}</option>`).join('');
   $('zs').value=ST.get('zs','0');$('zs').onchange=()=>{ST.set('zs',$('zs').value);newQ()};$('zt').onchange=newQ;$('zn').onclick=newQ;
   $('smt').onchange=refreshShare;$('smw').onchange=refreshShare;$('sms').onclick=doShare;$('smd').onclick=doDown;
