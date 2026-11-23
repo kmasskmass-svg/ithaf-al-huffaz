@@ -132,6 +132,23 @@ html.dark #ab .cta{background:#1f2a20}html.dark #ab .src{color:#aaa}
 #kv .sl img{display:block;width:100%;aspect-ratio:16/9;cursor:zoom-in;background:#fff}
 #kv .ex{padding:6px 14px 8px;font-size:16px;border-top:1px dashed var(--line);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 #kv .ex b{color:#7a5f20;font-weight:normal}
+#tv .kh{background:var(--card);border:1.5px solid var(--gold);border-radius:14px;padding:12px 16px;margin-bottom:12px}
+#tv .kh h2{margin:0;color:var(--g);font-size:24px}#tv .kh .by{color:#7a5f20;margin:2px 0 6px}
+#tv .ref{font-size:15px;color:#555;border-top:1px dashed var(--line);padding-top:6px;margin-top:8px}
+#tv .idx{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:6px;margin-top:8px}
+#tv .idx a{display:flex;gap:8px;align-items:center;text-decoration:none;color:var(--g);background:#fff;border:1px solid var(--line);border-radius:10px;padding:3px 10px;font-size:16px}
+#tv .idx a:hover{border-color:var(--gold)}
+.nb{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:30px;border-radius:8px;background:#7A1F1F;color:#fff;font-weight:bold;font-size:16px;padding:0 6px}
+#tv .ru{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden;scroll-margin-top:110px}
+#tv .ru h3{margin:0;display:flex;gap:10px;align-items:center;background:#F3ECD6;padding:6px 14px;color:var(--g);font-size:20px}
+#tv .ru .bd{padding:8px 16px 10px}
+#tv .ru .sm b{color:#7a5f20}
+#tv .ru ul{margin:4px 0;padding-right:22px}
+#tv .ru .eg{margin-top:6px;font-size:16px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+#tv .ru .eg>span{color:#555}
+#tv .pgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px;margin-top:10px}
+#tv .pgs img{width:100%;border:1px solid var(--line);border-radius:8px;cursor:zoom-in;background:#FFF6DF;aspect-ratio:1000/1209}
+html.dark #tv .ru h3{background:#1f302a}html.dark #tv .idx a{background:#0f1915}html.dark #tv .ref,html.dark #tv .ru .eg>span{color:#aaa}
 #lb{position:fixed;inset:0;background:#000e;z-index:25;display:flex;flex-direction:column}
 #lb .lbw{flex:1;overflow:auto;display:flex;align-items:center;justify-content:center;touch-action:pan-x pan-y pinch-zoom}
 #lb img{max-width:100%;max-height:100%;background:#fff}
@@ -162,7 +179,7 @@ html.dark .sh{background:#0B5D4B}
 </style></head><body>
 <header><div class="top"><h1>إتحاف الحُفّاظ بمتشابه الألفاظ</h1><a href="./">الكتب PDF</a><button class="gear" id="abb" title="عن التطبيق وميزاته">عن التطبيق</button><button class="gear" id="gb" title="الإعدادات">⚙</button></div>
 <div id="set" hidden><span>حجم الخط <button class="zb" id="z1">−</button> <button class="zb" id="z2">+</button></span><label><input type="checkbox" id="dk"> الوضع الليلي</label><label>القارئ <select id="rc"></select></label><button class="ub" id="ubn" title="إن ظهر لك شيء قديم">تحديث التطبيق الآن</button></div>
-<div class="tabs"><button data-m="s" class="on">بالسورة</button><button data-m="v">بالآية</button><button data-m="q">بالنص</button><button data-m="z">اختبر حفظك</button><button data-m="f">المفضلة</button><button data-m="k">مهارات الضبط</button></div></header>
+<div class="tabs"><button data-m="s" class="on">بالسورة</button><button data-m="v">بالآية</button><button data-m="q">بالنص</button><button data-m="z">اختبر حفظك</button><button data-m="f">المفضلة</button><button data-m="k">مهارات الضبط</button><button data-m="t">الضبط بالتقعيد</button></div></header>
 <main><div id="load">جارٍ تحميل البيانات…</div><div id="app" hidden>
 <div class="ctl" id="cs"><label>السورة</label><select id="ss"></select>
 <div class="chips" id="fl"><button class="chip on" data-t="">الكل</button><button class="chip" data-t="A">آيات متطابقة</button><button class="chip" data-t="B">عبارات متطابقة</button><button class="chip" data-t="C">اختلاف يسير</button></div></div>
@@ -170,7 +187,7 @@ html.dark .sh{background:#0B5D4B}
 <button class="btn" id="vp">‹ السابقة</button><button class="btn" id="vn">التالية ›</button></div>
 <div class="ctl" id="cq" hidden><input type="search" id="qi" placeholder="اكتب كلمات من الآية بلا تشكيل، مثل: ولا تقتلوا أولادكم"><label class="ex" title="تظهر المواضع التي فيها العبارة نفسها بكلماتها وترتيبها، دون زيادة حرف أو نقصه"><input type="checkbox" id="qx">العبارة بنصها</label><button class="btn p" id="qb">ابحث</button><div class="xo" id="xo"><label class="ex"><input type="checkbox" id="xm" checked>عرض طريقة الضبط</label><label class="ex"><input type="checkbox" id="xw">عرض التوجيه</label></div></div>
 <div class="ctl" id="cz" hidden><label>النطاق</label><select id="zs"></select><label>نوع السؤال</label><select id="zt"><option value="m">منوّع</option><option value="w">في أي موضع؟</option><option value="c">أكمل الكلمة</option></select><button class="btn p" id="zn">سؤال جديد</button><span class="score" id="zsc"></span></div>
-<div id="kv" hidden></div><div id="daily"></div><div class="info" id="info"></div><div id="res"></div></div></main>
+<div id="kv" hidden></div><div id="tv" hidden></div><div id="daily"></div><div class="info" id="info"></div><div id="res"></div></div></main>
 <div id="ab" hidden><div class="box"><div class="abh"><button class="x" id="abx">إغلاق ✕</button><h2>إتحاف الحُفّاظ بمتشابه الألفاظ</h2><p>التطبيق التفاعلي للمتشابه اللفظي في القرآن الكريم</p></div><div class="abb">
 <h3>عن التطبيق</h3>
 <p>تطبيق يجمع المتشابه اللفظي في القرآن الكريم سورةً سورة، ويضع أمام كل موضع نظائره بنصها، ويبيّن الفرق بينها بالألوان، ويذكر طريقة تمييز كل موضع من غيره، مع توجيه العلماء لسبب اختلاف اللفظ.</p>
@@ -198,6 +215,7 @@ html.dark .sh{background:#0B5D4B}
 <li><b>اختبر حفظك:</b> أسئلة من نوعين: «في أي موضع وردت الآية بهذا اللفظ؟» و«أكمل الكلمة»، على القرآن كله أو على حزب أو سورة، مع النتيجة وطريقة الضبط بعد كل جواب.</li>
 <li><b>متشابه اليوم:</b> مجموعة جديدة كل يوم في أعلى تبويب السورة، تصلح للمراجعة اليومية وللإرسال في مجموعات التحفيظ.</li>
 <li><b>مهارات الضبط:</b> تبويب فيه عرض الدكتور محمد عمر الجنايني «مهارات ضبط المتشابه اللفظي في القرآن الكريم» بشرائحه كاملة: تعريف المتشابه ومؤلفاته، وأسباب الخطأ فيه، وثلاث عشرة قاعدة لضبطه بأمثلتها.</li>
+<li><b>الضبط بالتقعيد:</b> تبويب فيه قواعد كتاب الشيخ فواز بن سعد الحنين «الضبط بالتقعيد للمتشابه اللفظي في القرآن المجيد»: ثماني قواعد عامة واثنتان وعشرون خاصة، لكل قاعدة خلاصتها ومثالها، وصفحاتها من الكتاب كاملة، مع إتاحة تحميل الكتاب.</li>
 <li><b>الإعدادات ⚙:</b> تكبير الخط وتصغيره، والوضع الليلي، واختيار القارئ.</li>
 <li><b>يتحدث تلقائيًّا:</b> كلما صدرت نسخة جديدة وصلتك وحدها عند فتح التطبيق مع الاتصال بالإنترنت، وتظهر لك رسالة بما أُضيف. وإن رأيت شيئًا قديمًا فاضغط ⚙ ثم «تحديث التطبيق الآن».</li>
 <li><b>يعمل بلا إنترنت:</b> من قائمة المتصفح في الجوال اختر «إضافة إلى الشاشة الرئيسية» فيصير تطبيقًا يعمل دون اتصال، وكل جزء من الكتاب تفتحه مرة يبقى محفوظًا.</li>
@@ -334,7 +352,7 @@ function moreH(){const b=document.querySelector('.more');if(b)b.remove();
 function xOpts(){const x=$('qx').checked;$('xo').classList.toggle('on',x);
   $('res').classList.toggle('notm',x&&!$('xm').checked);$('res').classList.toggle('notw',x&&!$('xw').checked);}
 function setMode(m){mode=m;if(m!='q')$('res').classList.remove('notm','notw');document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.m==m));document.querySelector('.tabs .on')?.scrollIntoView({inline:'nearest',block:'nearest'});
-  $('cs').hidden=m!='s';$('cv').hidden=m!='v';$('cq').hidden=m!='q';$('cz').hidden=m!='z';$('daily').hidden=m!='s';$('kv').hidden=m!='k';$('info').hidden=m=='k';$('res').hidden=m=='k';({s:showS,v:showV,q:showQ,z:showZ,f:showF,k:showK})[m]();}
+  $('cs').hidden=m!='s';$('cv').hidden=m!='v';$('cq').hidden=m!='q';$('cz').hidden=m!='z';$('daily').hidden=m!='s';$('kv').hidden=m!='k';$('tv').hidden=m!='t';$('info').hidden=m=='k'||m=='t';$('res').hidden=m=='k'||m=='t';({s:showS,v:showV,q:showQ,z:showZ,f:showF,k:showK,t:showT})[m]();}
 function goV(s,a){$('vs').value=s;$('va').value=a;setMode('v');scrollTo(0,0);}
 /* ===== التخزين في الجهاز ===== */
 const ST={get(k,d){try{const v=localStorage.getItem('ithaf_'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('ithaf_'+k,JSON.stringify(v))}catch(e){}}};
@@ -508,17 +526,65 @@ function showK(){location.hash='k';if($('kv').innerHTML)return;
     if(KX[i])h+=`<div class="ex"><b>افتح أمثلتها في التطبيق:</b> ${KX[i].map(([s,a])=>`<button class="ic lb" data-s="${s}" data-a="${a}">${D.names[s-1]} ${ar(a)}</button>`).join('')}</div>`;
     h+='</div>';}
   $('kv').innerHTML=h;
-  $('kv').onclick=e=>{const c=e.target.closest('.chip[data-k]');if(c){$('sl'+c.dataset.k).scrollIntoView({behavior:'smooth'});return}
-    const im=e.target.closest('img[data-k]');if(im)openLB(+im.dataset.k);};}
-function openLB(i){KI=Math.max(1,Math.min(KN,i));$('lbi').src=kimg(KI);$('lbc').textContent=`${ar(KI)} / ${ar(KN)}`;$('lb').hidden=false;}
-function initK(){$('lbx').onclick=()=>{$('lb').hidden=true;$('lb').classList.remove('zm');$('sl'+KI)?.scrollIntoView()};
+  $('kv').onclick=e=>{LBL=null;const c=e.target.closest('.chip[data-k]');if(c){$('sl'+c.dataset.k).scrollIntoView({behavior:'smooth'});return}
+    const im=e.target.closest('img[data-k]');if(im){LBL=null;openLB(+im.dataset.k)}};}
+let LBL=null,LBF=null;
+function openLB(i,list,f){if(list){LBL=list;LBF=f||null}else if(!LBL){LBL=Object.assign(Array.from({length:KN},(_,j)=>kimg(j+1)),{k:1});LBF=null}
+  KI=Math.max(1,Math.min(LBL.length,i));$('lbi').src=LBL[KI-1];$('lbc').textContent=LBF?LBF(KI):`${ar(KI)} / ${ar(LBL.length)}`;$('lb').hidden=false;}
+function initK(){$('lbx').onclick=()=>{$('lb').hidden=true;$('lb').classList.remove('zm');if(LBL&&LBL.k==1)$('sl'+KI)?.scrollIntoView()};
   $('lbn').onclick=()=>openLB(KI-1);$('lbp').onclick=()=>openLB(KI+1);
   $('lbz').onclick=()=>{$('lb').classList.toggle('zm');$('lbz').textContent=$('lb').classList.contains('zm')?'تصغير':'تكبير'};
   document.addEventListener('keydown',e=>{if($('lb').hidden)return;if(e.key=='Escape')$('lbx').click();if(e.key=='ArrowLeft')openLB(KI+1);if(e.key=='ArrowRight')openLB(KI-1)});
   let x0=null;$('lbw').addEventListener('touchstart',e=>{x0=e.touches.length==1&&!$('lb').classList.contains('zm')?e.touches[0].clientX:null},{passive:true});
   $('lbw').addEventListener('touchend',e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>60)openLB(KI+(dx>0?1:-1));x0=null});}
+/* ===== الضبط بالتقعيد (فواز بن سعد الحنين) ===== */
+// صفحات الكتاب في الملف: رقم صفحة PDF = رقم صفحة الكتاب + ١
+const TQG={t:'القواعد العامة لضبط المتشابهات',p:[19,22],sm:'القواعد العامة أصلٌ للقواعد الخاصة، وهي ضوابط تعين على ضبط المتشابهات:',ul:['الإخلاص لله تعالى.','كثرة القراءة والمراجعة الدائمة للقرآن الكريم.','الالتزام بالقراءة في مصحف واحد.','حضور القلب والذهن حال القراءة.','قراءة كتب المتشابهات وتدوين الفرائد والفوائد والنظر الدائم فيها.','الدراسة على المتقنين والإفادة من علمهم وتجربتهم.','الدعاء والالتجاء إلى الله بالعون والإتقان.','ترك المعاصي والذنوب.']};
+const TQ=[
+['الترتيب الهجائي',23,'إذا وجدت آيتين متشابهتين، فالغالب أن يبدأ الموضع المتشابه في الآية الأولى بحرف هجائي يسبق الحرف الذي يبدأ به في الآية الثانية، ويسميها بعضهم «الترتيب الألفبائي».',[['(فهم لا يرجعون) قبل (فهم لا يعقلون): الراء قبل العين',[[2,18],[2,171]]]]],
+['العناية بالآية الوحيدة',26,'كثير من الآيات المتشابهة تتماثل تمامًا إلا آية واحدة تنفرد عنها في جزء منها، فإذا عرف الحافظ هذه الآية الوحيدة استراح فيما عداها. والغالب أن تكون الوحيدة هي الأولى بين المواضع المتشابهة.',[['(ساء ما يعملون) في المائدة وحدها، وسائرها (ساء ما كانوا يعملون)',[[5,66],[9,9]]]]],
+['قاعدة (الواو قبل الفاء) و(الباء قبل الميم)',32,'الأغلب في القرآن أن تسبق الآيةُ التي تبدأ بالواو التي تبدأ بالفاء، وهي قاعدة أغلبية لها مستثنيات. ويلحق بها قاعدة (الباء قبل الميم)، ففي كثير من الآيات المتشابهة تسبق الباءُ الميمَ.',[['(وما أوتيتم) في القصص قبل (فما أوتيتم) في الشورى',[[28,60],[42,36]]]]],
+['الربط بين الموضع المتشابه واسم السورة',38,'في الغالب علاقة بين الموضع المتشابه واسم السورة، إما بحرف مشترك أو معنى ظاهر أو غير ذلك، والعناية بهذه العلاقة تعين على الضبط. وهي من أيسر القواعد وأسرعها حضورًا إلى الذهن.',[['(أيامًا معدودة) في البقرة مفردة كاسمها، و(معدودات) في آل عمران جمع كاسمها',[[2,80],[3,24]]]]],
+['الضبط بالزيادة للموضع المتأخر',47,'كثير من الآيات المتشابهة يكون الموضع المتأخر منها فيه زيادة على المتقدم، وقد يأتي خلاف ذلك، فيُضبط الأكثر ويُترك المستثنى الأقل. والمراد بالزيادة والنقصان اصطلاح أهل هذا الفن، لا أن في القرآن زيادة أو نقصًا.',[['(ما أنت إلا بشر مثلنا) في قصة صالح، ثم (وما أنت…) بزيادة الواو في قصة شعيب',[[26,154],[26,186]]]]],
+['العناية بما تمتاز به السورة',51,'كثير من الآيات المتشابهة تمتاز بشيء من الطول أو القصر، أو كثرة التشابه، أو كثرة دوران الكلمة في السورة، ومعرفة ذلك تعين على معرفة التشابه وضبطه. وذكر المؤلف تحتها:',null,['قلة التركيب اللفظي، كما في آل عمران والأعراف.','كثرة الدوران للكلمة أو الجملة في السورة.','القاعدة الخاصة بالسورة.']],
+['الضبط بالحصر',61,'جمع الآيات المتشابهة ومعرفة مواضعها وعددها، وهذا حسن في المواضع القليلة المتشابهة؛ فمن حفظها وأتقنها سلم من الخطأ فيها مع غيرها.'],
+['الضبط بالجمل الإنشائية',68,'وضع جملة مفيدة تجمع الآيات المتشابهة أو أسماء السور التي جاءت فيها، فتعين على تذكّرها.',[['جملة «لا اعتكاف في الحج»: (والعاكفين) في البقرة، و(والقائمين) في الحج',[[2,125],[22,26]]]]],
+['الضبط بجمع الحرف الأول من أوائل الكلمات المتشابهة',74,'عند التشابه بين آيتين أو أكثر، اجمع الحرف الأول من بداية كل موضع متشابه، فيخرج لك في الغالب كلمة مفيدة، وقد تكون غير مفيدة، فتعينك على الضبط.',[['كلمة «أرض» لترتيب (أنذرهم، راودوه، صبّحهم) بعد (ولقد) في القمر',[[54,36],[54,37],[54,38]]]]],
+['الضبط بالشعر',79,'ضبط الآيات المتشابهة بأبيات شعرية ونظم مفيد، ولا سيما لمن يقرض الشعر ويحبه، وهي طريقة متبعة قديمًا عند العلماء، كمنظومة السخاوي «هداية المرتاب» ومنظومة الميهي «هداية الصبيان».'],
+['ربط الكلمة المتشابهة مع اسم السورة بالحركات',82,'قد تكون العلاقة بين الكلمة المتشابهة واسم السورة في الحركات، فمعرفة ذلك والربط بينهما يعين على الضبط.',[['(يُنزَفون) بفتح الزاي في الصافات كفتحة الصاد، و(يُنزِفون) بكسرها في الواقعة كقافها',[[37,47],[56,19]]]]],
+['الضبط بالتنكير والتعريف',84,'يشكل على الحافظ أحيانًا أجاء اللفظ منكّرًا أم معرّفًا، والغالب في القرآن أن يسبق المنكّرُ المعرّفَ، وقد يرد خلاف ذلك.',[['(بلدًا آمنًا) في البقرة قبل (البلد آمنًا) في إبراهيم',[[2,126],[14,35]]]]],
+['الربط بين السورتين فأكثر',86,'وهي مستفادة من الضبط بالحصر: أن تربط بين سورتين أو أكثر جاء فيهما الموضع المتشابه على نسق واحد، كمجيء التفكّر قبل التعقّل في سورتي الرعد والنحل.'],
+['ربط الزيادة بالآية أو السورة الطويلة',88,'قد يكون مكمن التشابه بين الآيتين في الطول والقصر، فيكون الحل بربط الزيادة بالسورة أو الآية الطويلة.'],
+['الضبط بالتأمل للمعنى في الموضع المتشابه',90,'وهي من أمهات القواعد، بل هي لبّ المتشابه؛ فالتشابه إنما جاء لمعنى عظيم وحكمة بالغة، ومن تدبّر وجد أن الزيادة والنقصان والتقديم والتأخير والإبدال لمعنى مراد ينبغي الوقوف عنده والتأمل فيه.',[['(فانفجرت) في البقرة و(فانبجست) في الأعراف',[[2,60],[7,160]]]]],
+['الضبط بمعرفة موضع الآية في المصحف',96,'معرفة موقع الآية في الصفحة تساعد على الضبط والإتقان، وهذه القواعد خاصة بمصحف مجمع الملك فهد (مصحف المدينة).'],
+['الضبط بالصورة الذهنية',98,'بعض الآيات المشكلة، ولا سيما ما فيه أقسام وأجزاء، يكون ضبطها في الغالب بتصوّر ترتيبها في الذهن، كترتيب النعم في سورة الواقعة.'],
+['الضبط بالمجاورة والموافقة',99,'إذا ورد موضع مشكل نُظر فيما قبله وما بعده من الآية أو الكلمة أو السورة المجاورة، فيُربط بينهما بحرف مشترك أو كلمة متشابهة أو غير ذلك.'],
+['الموافقة بين الموضع المتشابه وأول السورة',105,'العناية بالعلاقة أحيانًا بين أول السورة والموضع المتشابه، إما بكلمة أو حركة أو غير ذلك.'],
+['الموافقة بين فواصل الآي',107,'أواخر الآيات في الغالب على نسق واحد وانسجام تام، فمراعاة هذا الانسجام تقي من الخطأ في المواضع المشكلة منها.'],
+['الضبط بالتقسيم والتجزئة',109,'من المواضع المتشابهة ما يكون ضبطه بتقسيمه وتجزئته، إذ تأتي في الغالب بترتيب وتناسق معين يُدرك بتأمل يسير، كمواضع قصة آدم مع إبليس.'],
+['الضبط بالتذكير والتأنيث',112,'يشكل على الحافظ كثيرًا الموضع المذكّر مع المؤنث، والغالب أن المقدَّم في كثير من المواضع هو المذكّر.',[['(بطونه) في النحل قبل (بطونها) في المؤمنون',[[16,66],[23,21]]]]],
+];
+const tqImg=n=>`tqeed-${String(n).padStart(3,'0')}.webp`,TQEND=115;
+const tqRange=i=>i<0?TQG.p:[TQ[i][1],i+1<TQ.length?TQ[i+1][1]-1:TQEND];
+function tqPages(i){const [a,b]=tqRange(i);return Array.from({length:b-a+1},(_,k)=>a+k);}
+function showT(){location.hash='t';if($('tv').innerHTML)return;
+  const eg=E=>E?E.map(([t,L])=>`<div class="eg"><span>مثال: ${t}</span>${L.map(([s,a])=>D.pg[s+':'+a]?`<button class="ic lb" data-s="${s}" data-a="${a}">${D.names[s-1]} ${ar(a)}</button>`:`<span>(${D.names[s-1]} ${ar(a)})</span>`).join('')}</div>`).join(''):'';
+  const blk=(id,num,t,sm,ul,E,i)=>{const [a,b]=tqRange(i);return `<div class="ru" id="ru${id}"><h3><span class="nb">${num}</span>${t}</h3><div class="bd"><div class="sm"><b>خلاصتها:</b> ${sm}</div>${ul?`<ul>${ul.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}${eg(E)}
+    <button class="btn" data-tq="${i}" style="margin-top:8px">اقرأ القاعدة كاملة بأمثلتها من الكتاب (ص ${ar(a-1)}${b>a?'–'+ar(b-1):''})</button><div class="pgs" hidden></div></div></div>`};
+  let h=`<div class="kh"><h2>الضبط بالتقعيد للمتشابه اللفظي في القرآن المجيد</h2><div class="by">تأليف الشيخ فواز بن سعد الحنين · تقريظ المشايخ: محمود بن عمر سكر، ومحمد بن عوض الحرباوي، ومحمود بن محمد راغب</div>
+  <div>قواعد لضبط الآيات المتشابهة: ثمانٍ عامة، واثنتان وعشرون خاصة، كل قاعدة بشرحها وأمثلتها. تحت كل قاعدة خلاصتها، وزرّ يعرض صفحاتها من الكتاب كاملة.</div>
+  <div class="idx"><a href="#" data-go="g"><span class="nb">ع</span>القواعد العامة</a>${TQ.map((r,i)=>`<a href="#" data-go="${i+1}"><span class="nb">${ar(i+1)}</span>${r[0]}</a>`).join('')}</div>
+  <div class="ref"><b>المرجع:</b> الحنين، فواز بن سعد. «الضبط بالتقعيد للمتشابه اللفظي في القرآن المجيد». الطبعة الثانية. الرياض: ١٤٢٩هـ. ١١٦ صفحة. الخلاصات بتصرف يسير، والأمثلة والشرح في صفحات الكتاب كما هي، والحقوق لمؤلفه. <a href="aldabt-bittaqeed.pdf" target="_blank" rel="noopener" download>تحميل الكتاب كاملًا (PDF)</a></div></div>`;
+  h+=blk('g','ع',TQG.t,TQG.sm,TQG.ul,null,-1);
+  TQ.forEach((r,i)=>{h+=blk(i+1,ar(i+1),r[0],r[2],r[4],r[3],i)});
+  $('tv').innerHTML=h;
+  $('tv').onclick=e=>{const g=e.target.closest('[data-go]');if(g){e.preventDefault();$('ru'+g.dataset.go).scrollIntoView({behavior:'smooth'});return}
+    const b=e.target.closest('[data-tq]');if(b){const i=+b.dataset.tq,box=b.nextElementSibling;
+      if(!box.innerHTML)box.innerHTML=tqPages(i).map((n,k)=>`<img loading="lazy" src="${tqImg(n)}" alt="صفحة ${ar(n-1)} من الكتاب" data-i="${i}" data-k="${k+1}">`).join('');
+      box.hidden=!box.hidden;b.textContent=box.hidden?b.textContent.replace('إخفاء صفحات القاعدة','اقرأ القاعدة كاملة بأمثلتها من الكتاب'):b.textContent.replace('اقرأ القاعدة كاملة بأمثلتها من الكتاب','إخفاء صفحات القاعدة');return}
+    const im=e.target.closest('.pgs img');if(im){const P=tqPages(+im.dataset.i);openLB(+im.dataset.k,P.map(tqImg),k=>`صفحة ${ar(P[k-1]-1)} من الكتاب`)}};}
 /* ===== التحديث التلقائي ===== */
-const BUILD='2026-11-23.3'; // يطابق v في version.json
+const BUILD='2026-11-23.4'; // يطابق v في version.json
 async function hardUpdate(){try{const ks=await caches.keys();await Promise.all(ks.filter(k=>k!='ithaf-books').map(k=>caches.delete(k)));
   const r=await navigator.serviceWorker?.getRegistration();if(r)await r.update();}catch(e){}
   location.replace(location.pathname+'?u='+Date.now()+location.hash);}
@@ -549,7 +615,8 @@ fetch('data.json').then(r=>r.json()).then(d=>{D=d;
   if(h.startsWith('v=')){const[s,a]=h.slice(2).split(':');goV(+s,+a)}
   else if(h.startsWith('q=')){$('qi').value=h.slice(2);setMode('q')}
   else if(h.startsWith('x=')){$('qi').value=h.slice(2);$('qx').checked=true;setMode('q')}
-  else if(h=='z')setMode('z');else if(h.startsWith('k')){setMode('k');const n=+h.split('=')[1];if(n)setTimeout(()=>document.getElementById('sl'+n)?.scrollIntoView(),300)}else if(h=='f')setMode('f');
+  else if(h=='z')setMode('z');else if(h.startsWith('t')){setMode('t');const n=h.split('=')[1];if(n)setTimeout(()=>document.getElementById('ru'+n)?.scrollIntoView(),300)}
+  else if(h.startsWith('k')){setMode('k');const n=+h.split('=')[1];if(n)setTimeout(()=>document.getElementById('sl'+n)?.scrollIntoView(),300)}else if(h=='f')setMode('f');
   else{if(h.startsWith('s='))$('ss').value=+h.slice(2)||1;setMode('s')}
 }).catch(()=>{$('load').textContent='تعذّر تحميل البيانات. افتح الصفحة من الموقع المنشور لا من ملف على الجهاز.'});
 </script></body></html>
