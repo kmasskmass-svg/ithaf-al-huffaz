@@ -1,5 +1,5 @@
 // يحفظ التطبيق في الجهاز ليعمل دون اتصال. غيّر رقم النسخة عند كل تحديث للملفات.
-const V = 'ithaf-v1';
+const V = 'ithaf-v2';
 const CORE = ['./', './index.html', './app.html', './data.json', './manifest.json', './og-image.jpg',
   './icon-192.png', './icon-512.png', './fonts/AmiriQuran.ttf', './fonts/Amiri-Regular.ttf', './fonts/Amiri-Bold.ttf'];
 self.addEventListener('install', e => {
