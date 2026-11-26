@@ -226,7 +226,7 @@ html.dark #nv .ru h3{background:#1f302a}html.dark #nv .ref{color:#aaa}
 #lb .lbb .btn{background:#fff}#lb .lbb .btn.p{background:var(--gold);border-color:var(--gold);color:#fff}
 html.dark #kv .sl .st{background:#1f302a}html.dark #kv .kh .ref{color:#aaa}
 @media(max-width:600px){.tabs{overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}header .tabs>button{flex:0 0 auto;padding:5px 12px;font-size:15px}}
-#sm{position:fixed;inset:0;background:#000a;z-index:20;display:flex;align-items:center;justify-content:center;padding:12px}
+#sm{position:fixed;inset:0;z-index:24;background:#000a;display:flex;align-items:center;justify-content:center;padding:12px}
 #sm .box{background:var(--card);border-radius:14px;max-width:520px;width:100%;max-height:96vh;overflow:auto;padding:12px 14px;text-align:center}
 #sm img{width:100%;border-radius:8px;border:1px solid var(--line);background:#eee;min-height:120px}
 #sm .row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:8px 0}
@@ -289,7 +289,7 @@ html.dark .sh{background:#0B5D4B}
 <li><b>التوجيه:</b> في أسفل كل مجموعة توجيه الإسكافي والكرماني وابن الزبير لسبب اختلاف اللفظ، اضغط على اسم أحدهم ليظهر كلامه.</li>
 <li><b>في الكتاب:</b> يفتح الكتاب داخل التطبيق على الصفحة التي ذُكر فيها الموضع مباشرة، مع التكبير والتنزيل. وكذلك أزرار «الكتاب ص» في إغاثة اللهفان وصفحات المنظومات.</li>
 <li><b>الاستماع ▶:</b> يُسمعك الآية بصوت قارئ تختاره من الإعدادات ⚙، ويحتاج إلى اتصال بالإنترنت.</li>
-<li><b>مشاركة:</b> يصنع بطاقة مزخرفة فيها المتشابه مع اسم الكتاب، ترسلها في واتساب أو تيليجرام، وتختار أن يظهر فيها طريقة الضبط أو التوجيه.</li>
+<li><b>مشاركة:</b> يصنع بطاقة مزخرفة ترسلها في واتساب أو تيليجرام، فيها اسم التطبيق ومصدر الفائدة. وتجده في مجموعات الإتحاف وتختار معها طريقة الضبط أو التوجيه، وفي ضوابط إغاثة اللهفان، وفي كل قاعدة من الضبط بالتقعيد، وفي كل شريحة من مهارات الضبط، وفي نافذة المصحف.</li>
 </ul>
 <h3>الإعدادات والتحديث</h3>
 <ul>
@@ -322,7 +322,7 @@ html.dark .sh{background:#0B5D4B}
 <div id="fabs"><button class="fb" id="fshare" title="شارك التطبيق" aria-label="شارك التطبيق"><svg viewBox="0 0 24 24"><path d="M18 16.1c-.8 0-1.5.3-2 .8l-7.1-4.1c.1-.3.1-.5.1-.8s0-.5-.1-.8L16 7.1c.5.5 1.2.8 2 .8 1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3c0 .3 0 .5.1.8L8 9.8C7.5 9.3 6.8 9 6 9c-1.7 0-3 1.3-3 3s1.3 3 3 3c.8 0 1.5-.3 2-.8l7.1 4.2c-.1.2-.1.5-.1.7 0 1.6 1.3 2.9 2.9 2.9s2.9-1.3 2.9-2.9-1.2-3-2.8-3z"/></svg></button><button class="fb" id="fcont" title="تواصل مع مصمم التطبيق" aria-label="تواصل مع مصمم التطبيق"><svg viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg></button><button id="fab" hidden title="العودة إلى القائمة الرئيسة">☰ القائمة</button></div>
 <div id="sht" hidden><div class="sb" id="shb"></div></div>
 <div id="lb" hidden><div class="lbw" id="lbw"><img id="lbi" alt=""></div><div class="lbb"><button class="btn" id="lbn">‹ السابقة</button><span id="lbc"></span><button class="btn" id="lbp">التالية ›</button><button class="btn" id="lbz">تكبير</button><button class="btn p" id="lbx">إغلاق ✕</button></div></div>
-<div id="sm" hidden><div class="box"><img id="smi" alt="البطاقة"><div class="row"><label class="ex"><input type="checkbox" id="smt" checked>طريقة الضبط</label><label class="ex"><input type="checkbox" id="smw">التوجيه</label></div><div class="row"><button class="btn p" id="sms">مشاركة</button><button class="btn" id="smd">تحميل الصورة</button><button class="btn" id="smc">إغلاق</button></div></div></div>
+<div id="sm" hidden><div class="box"><img id="smi" alt="البطاقة"><div class="row"><label class="ex"><input type="checkbox" id="smt" checked><span>طريقة الضبط</span></label><label class="ex"><input type="checkbox" id="smw"><span>التوجيه</span></label></div><div class="row"><button class="btn p" id="sms">مشاركة</button><button class="btn" id="smd">تحميل الصورة</button><button class="btn" id="smc">إغلاق</button></div></div></div>
 <footer>إعداد: كليب بن أحمد بن ضيف الله الزهراني · المصادر: درة التنزيل للإسكافي، البرهان للكرماني، ملاك التأويل لابن الزبير</footer>
 <script>
 const AR='٠١٢٣٤٥٦٧٨٩',ar=n=>String(n).replace(/\d/g,d=>AR[d]);
@@ -547,7 +547,7 @@ function initIG(ig){IG=ig||[];IGV={};IGG={};IGS={};IGQ=[];
       if(k>=2||(k>=1&&vs.size==1))(IGG[gi]=IGG[gi]||[]).push(r);}});}
 const igLink=r=>pvLink('ighatha-allahfan.pdf','إغاثة اللهفان في ضبط متشابهات القرآن',IG[r][3],`الكتاب ص ${ar(IG[r][3]-(IG[r][3]<=238?2:3))}`);
 function igCard(r,s,a){const [P,X,M]=IG[r];
-  let h=`<div class="card igc"><div class="ch"><span class="badge bI">إغاثة اللهفان</span><span class="head" style="font-family:AmiriW;font-size:18px">${M.map(m=>`<span class="mc">${esc(m)}</span>`).join(' ')}</span><span class="num">${ar(P.length)} ${P.length>2&&P.length<11?'مواضع':'موضع'}</span></div>`;
+  let h=`<div class="card igc"><div class="ch"><span class="badge bI">إغاثة اللهفان</span><span class="head" style="font-family:AmiriW;font-size:18px">${M.map(m=>`<span class="mc">${esc(m)}</span>`).join(' ')}</span><span class="num">${ar(P.length)} ${P.length>2&&P.length<11?'مواضع':'موضع'}</span><span class="acts"><button class="ic shr" data-k="i" data-id="${r}" title="مشاركة بطاقة مزخرفة">مشاركة</button></span></div>`;
   P.forEach((p,k)=>{const tg=s&&p[0]==s&&(!a||(a>=p[1]&&a<=p[2]))?' tg':'';
     h+=`<div class="pl"><span class="lb${tg}" data-s="${p[0]}" data-a="${p[1]}">${plab(p)}</span> ${tools(p[0],p[1])} <span class="q">${esc(X[k]||'')}</span></div>`});
   return h+`<div class="igw"><b>المرجع:</b> إغاثة اللهفان للوراقي ${igLink(r)}</div></div>`;}
@@ -601,8 +601,8 @@ function showM(){
 function mPop(s,a){const G=D.v[s+':'+a]||[],R=IGV[s+':'+a]||[];
   let h=`<div class="pph"><b>${D.names[s-1]} ${ar(a)}</b><button class="btn" id="ppx">إغلاق ✕</button></div><div class="ppb">`;
   G.forEach(gi=>{const g=D.g[gi],me=g.p.find(p=>p[0]==s&&p[1]==a);
-    h+=`<div class="ppi"><span class="badge b${g.t}">${TN[g.t]}</span> <span class="pps">${g.p.filter(p=>p!==me).slice(0,6).map(p=>`<button class="ic lb" data-s="${p[0]}" data-a="${p[1]}">${D.names[p[0]-1]} ${ar(p[1])}</button>`).join(' ')}${g.p.length>7?' …':''}</span>${me&&me[4]?`<div class="tm"><b>التمييز:</b> ${esc(me[4])}</div>`:''}</div>`;});
-  R.forEach(r=>{const [P,X,M]=IG[r];h+=`<div class="ppi"><span class="badge bI">إغاثة اللهفان</span> <span class="pps">${P.filter(p=>!(p[0]==s&&a>=p[1]&&a<=p[2])).map(p=>`<button class="ic lb" data-s="${p[0]}" data-a="${p[1]}">${plab(p)}</button>`).join(' ')}</span><div class="tm"><b>الضبط:</b> ${M.map(m=>esc(m)).join('، ')} ${igLink(r)}</div></div>`;});
+    h+=`<div class="ppi"><span class="badge b${g.t}">${TN[g.t]}</span> <button class="ic shr" data-g="${gi}">مشاركة</button> <span class="pps">${g.p.filter(p=>p!==me).slice(0,6).map(p=>`<button class="ic lb" data-s="${p[0]}" data-a="${p[1]}">${D.names[p[0]-1]} ${ar(p[1])}</button>`).join(' ')}${g.p.length>7?' …':''}</span>${me&&me[4]?`<div class="tm"><b>التمييز:</b> ${esc(me[4])}</div>`:''}</div>`;});
+  R.forEach(r=>{const [P,X,M]=IG[r];h+=`<div class="ppi"><span class="badge bI">إغاثة اللهفان</span> <button class="ic shr" data-k="i" data-id="${r}">مشاركة</button> <span class="pps">${P.filter(p=>!(p[0]==s&&a>=p[1]&&a<=p[2])).map(p=>`<button class="ic lb" data-s="${p[0]}" data-a="${p[1]}">${plab(p)}</button>`).join(' ')}</span><div class="tm"><b>الضبط:</b> ${M.map(m=>esc(m)).join('، ')} ${igLink(r)}</div></div>`;});
   h+=mzLine(s,a)+`</div><div class="ppf"><button class="btn p" id="ppd">التفاصيل الكاملة للآية</button></div>`;
   $('pop').innerHTML=h;$('pop').hidden=false;
   $('ppx').onclick=()=>{$('pop').hidden=true};$('ppd').onclick=()=>{$('pop').hidden=true;goV(s,a)};
@@ -666,66 +666,92 @@ function wrap(c,words,font,maxW){c.font=font;const sp=c.measureText(' ').width;c
   if(line.length)L.push({ws:line,w:w-sp});return L;}
 function drawLines(c,L,font,x0,y,lh,align,W){c.font=font;const sp=c.measureText(' ').width;
   for(const l of L){let x=align=='c'?x0+(W+l.w)/2:x0+W;for(const o of l.ws){c.fillStyle=o.c;c.fillText(o.t,x,y);x-=o.m+sp}y+=lh}return y;}
-function cardLayout(c,gi,opt){const g=D.g[gi],W=1080,cw=W-220,Ls=[];let H=0;
+/* مواصفة البطاقة لكل نوع: مجموعة الإتحاف، ضابط الإغاثة، قاعدة التقعيد، شريحة الجنايني */
+const TQSRC='«الضبط بالتقعيد للمتشابه اللفظي في القرآن المجيد» لفواز بن سعد الحنين';
+function shareSpec(k,id){
+  if(k=='g'){const g=D.g[id],HC={A:'#0B5D4B',B:'#1F4E8C',C:'#B3261E'}[g.t];
+    return {k,top:'من المتشابه اللفظي في القرآن الكريم',badge:TN[g.t],bc:HC,head:g.h,
+      items:g.p.slice(0,6).map(p=>{const H2=new Set(p[3]);return {lbl:`سورة ${D.names[p[0]-1]} · الآية ${ar(p[1])}`,q:('﴿ '+p[2]+' ﴾').split(' ').map((t,i)=>({t,c:t=='﴿'||t=='﴾'?'#B08D3C':H2.has(i-1)?HC:'#222'})),note:p[4]?'التمييز: '+p[4]:''}}),
+      more:g.p.length>6?g.p.length-6:0,extra:g.w.length?{lbl:'توجيه '+g.w[0][0],t:g.w[0][1]}:null,
+      o1:'طريقة الضبط',o2:g.w.length?'التوجيه':'',src:'',
+      text:`من المتشابه اللفظي (${TN[g.t]})\nمن كتاب «إتحاف الحُفّاظ بمتشابه الألفاظ»`,url:`${SITE}#v=${g.p[0][0]}:${g.p[0][1]}`};}
+  if(k=='i'){const [P,X,M,pp]=IG[id],bp=pp-(pp<=238?2:3);
+    return {k,top:'من ضوابط المتشابه اللفظي',badge:'إغاثة اللهفان',bc:'#8A6D1F',head:'',
+      items:P.slice(0,6).map((p,j)=>({lbl:`سورة ${D.names[p[0]-1]} · ${p[2]>p[1]?'الآيات':'الآية'} ${plab(p).replace(D.names[p[0]-1]+' ','')}`,q:String(X[j]||'').split(' ').map(t=>({t,c:/[﴿﴾…⁂]/.test(t)&&t.length<3?'#B08D3C':'#222'})),note:''})),
+      more:P.length>6?P.length-6:0,tail:'طريقة الضبط: '+M.join('، '),o1:'طريقة الضبط',o2:'',
+      src:`المصدر: «إغاثة اللهفان في ضبط متشابهات القرآن» لعبد الله الوراقي، ص ${ar(bp)}`,
+      text:`ضابط من «إغاثة اللهفان في ضبط متشابهات القرآن» للوراقي`,url:`${SITE}#v=${P[0][0]}:${P[0][1]}`};}
+  if(k=='t'){const r=id<0?null:TQ[id],[a]=tqRange(id);
+    const body=r?r[2]:TQG.sm,ul=r?r[4]:TQG.ul,E=r&&r[3]?r[3].map(([t])=>'مثال: '+t):[];
+    return {k,top:'قاعدة في ضبط المتشابه اللفظي',badge:id<0?'القواعد العامة':'القاعدة '+ar(id+1),bc:'#7A1F1F',headW:r?r[0]:TQG.t,
+      prose:[body,...(ul||[]).map(x=>'• '+x)],items:[],tailL:E,o1:E.length?'المثال':'',o2:'',
+      src:`المصدر: ${TQSRC}، ص ${ar(a-1)}`,text:`قاعدة في ضبط المتشابه اللفظي: ${r?r[0]:TQG.t}\nمن ${TQSRC}`,url:`${SITE}#t=${id<0?'g':id+1}`};}
+  if(k=='k'){return {k,top:'مهارات ضبط المتشابه اللفظي',badge:'شريحة '+ar(id)+' من '+ar(KN),bc:'#0B5D4B',headW:KT[id-1]||'',img:kimg(id),items:[],o1:'',o2:'',
+      src:'المصدر: «مهارات ضبط المتشابه اللفظي في القرآن الكريم»، عرض الدكتور محمد عمر الجنايني',
+      text:`من عرض «مهارات ضبط المتشابه اللفظي في القرآن الكريم» للدكتور محمد عمر الجنايني`,url:`${SITE}#k=${id}`};}}
+function cardLayout(c,S,opt,img){const W=1080,cw=W-220,Ls=[];let H=0;
   const add=(type,obj,h)=>{Ls.push({type,...obj,h});H+=h};
-  const QF='44px AmiriQ',TF='30px AmiriW',LF='bold 32px AmiriW';
-  const HC={A:'#0B5D4B',B:'#1F4E8C',C:'#B3261E'}[g.t];
+  const QF='44px AmiriQ',TF='30px AmiriW',PF='34px AmiriW';
+  const txt=(s,col,font,lh,first)=>{const L=wrap(c,String(s).replace(/\s+/g,' ').split(' ').map((t,i)=>({t,c:i==0&&first?first:col})),font,cw);add('lines',{L,font,lh,align:'r'},L.length*lh+8)};
   add('sp',{},10);
-  if(g.h){const L=wrap(c,g.h.split(' ').map(t=>({t,c:'#0B5D4B'})),'bold 54px AmiriQ',cw);add('lines',{L,font:'bold 54px AmiriQ',lh:96,align:'c'},L.length*96+20)}
+  if(S.head){const L=wrap(c,S.head.split(' ').map(t=>({t,c:'#0B5D4B'})),'bold 54px AmiriQ',cw);add('lines',{L,font:'bold 54px AmiriQ',lh:96,align:'c'},L.length*96+20)}
+  if(S.headW){const L=wrap(c,S.headW.split(' ').map(t=>({t,c:'#0B5D4B'})),'bold 48px AmiriW',cw);add('lines',{L,font:'bold 48px AmiriW',lh:80,align:'c'},L.length*80+14)}
   add('orn',{},50);
-  const P=g.p.slice(0,6);
-  P.forEach(p=>{add('lbl',{t:`سورة ${D.names[p[0]-1]} · الآية ${ar(p[1])}`},52);
-    const H2=new Set(p[3]);const L=wrap(c,('﴿ '+p[2]+' ﴾').split(' ').map((t,i)=>({t,c:t=='﴿'||t=='﴾'?'#B08D3C':H2.has(i-1)?HC:'#222'})),QF,cw);
-    add('lines',{L,font:QF,lh:84,align:'r'},L.length*84+6);
-    if(opt.tm&&p[4]){const L2=wrap(c,('التمييز: '+p[4]).split(' ').map((t,i)=>({t,c:i==0?'#7a5f20':'#555'})),TF,cw);add('lines',{L:L2,font:TF,lh:50,align:'r'},L2.length*50+8)}
-    add('sp',{},18);});
-  if(g.p.length>6)add('note',{t:`ولها ${ar(g.p.length-6)} مواضع أخرى في التطبيق`},50);
-  if(opt.tw&&g.w.length){const [who,t]=g.w[0];add('orn',{},50);add('lbl',{t:'توجيه '+who,c:'#B08D3C'},52);
-    let L=wrap(c,t.replace(/\s+/g,' ').split(' ').map(t=>({t,c:'#333'})),TF,cw);if(L.length>9){L=L.slice(0,9);L[8].ws.push({t:'…',c:'#333',m:c.measureText('…').width})}
+  if(img){const h=Math.round(img.height*cw/img.width);add('img',{img,ih:h},h+24)}
+  (S.prose||[]).forEach(p=>txt(p,'#222',PF,58));
+  S.items.forEach(it=>{add('lbl',{t:it.lbl},52);const L=wrap(c,it.q,QF,cw);add('lines',{L,font:QF,lh:84,align:'r'},L.length*84+6);
+    if(opt.tm&&it.note)txt(it.note,'#555',TF,50,'#7a5f20');add('sp',{},18);});
+  if(S.more)add('note',{t:`ولها ${ar(S.more)} ${S.more>2&&S.more<11?'مواضع أخرى':'موضعًا آخر'} في التطبيق`},50);
+  if(opt.tm&&S.tail){add('sp',{},6);txt(S.tail,'#5b4511','bold 32px AmiriW',54);}
+  if(opt.tm&&S.tailL&&S.tailL.length){add('sp',{},6);S.tailL.forEach(t=>txt(t,'#5b4511',TF,52));}
+  if(opt.tw&&S.extra){add('orn',{},50);add('lbl',{t:S.extra.lbl,c:'#B08D3C'},52);
+    let L=wrap(c,S.extra.t.replace(/\s+/g,' ').split(' ').map(t=>({t,c:'#333'})),TF,cw);if(L.length>9){L=L.slice(0,9);L[8].ws.push({t:'…',c:'#333',m:c.measureText('…').width})}
     add('lines',{L,font:TF,lh:52,align:'r'},L.length*52+10);}
+  if(S.src){add('sp',{},10);const L=wrap(c,S.src.split(' ').map(t=>({t,c:'#7a5f20'})),'26px AmiriW',cw);add('lines',{L,font:'26px AmiriW',lh:44,align:'c'},L.length*44+6)}
   add('sp',{},30);return {Ls,H:H+250+250,W};}
-async function drawCard(gi,opt){
-  await Promise.all(['44px AmiriQ','bold 32px AmiriW','30px AmiriW'].map(f=>document.fonts.load(f).catch(()=>0)));
+async function drawCard(S,opt){
+  await Promise.all(['44px AmiriQ','bold 32px AmiriW','30px AmiriW','bold 54px AmiriQ'].map(f=>document.fonts.load(f).catch(()=>0)));
+  let img=null;if(S.img){img=new Image();img.src=S.img;await img.decode().catch(()=>{img=null})}
   const cv=document.createElement('canvas');let c=cv.getContext('2d');c.direction='rtl';
-  const {Ls,H,W}=cardLayout(c,gi,opt);cv.width=W;cv.height=Math.max(H,1080);c=cv.getContext('2d');c.direction='rtl';c.textBaseline='alphabetic';
-  const Hh=cv.height,g=D.g[gi];
+  const {Ls,H,W}=cardLayout(c,S,opt,img);cv.width=W;cv.height=Math.max(H,1080);c=cv.getContext('2d');c.direction='rtl';c.textBaseline='alphabetic';
+  const Hh=cv.height;
   c.fillStyle='#F7F0DC';c.fillRect(0,0,W,Hh);
   c.globalAlpha=.07;for(let y=40;y<Hh;y+=90)for(let x=(y/90%2)*45+20;x<W;x+=90)star(c,x,y,26,'#B08D3C',false);c.globalAlpha=1;
   c.fillStyle='#FFFDF6';c.fillRect(48,48,W-96,Hh-96);
   c.strokeStyle='#B08D3C';c.lineWidth=6;c.strokeRect(30,30,W-60,Hh-60);c.lineWidth=2;c.strokeRect(44,44,W-88,Hh-88);
   c.strokeStyle='#0B5D4B';c.lineWidth=3;c.strokeRect(60,60,W-120,Hh-120);
   [[60,60],[W-60,60],[60,Hh-60],[W-60,Hh-60]].forEach(([x,y])=>{star(c,x,y,30,'#B08D3C',true);star(c,x,y,16,'#0B5D4B',true);star(c,x,y,7,'#F7F0DC',true)});
-  // الترويسة
   c.fillStyle='#0B5D4B';c.fillRect(60,60,W-120,120);c.fillStyle='#B08D3C';c.fillRect(60,180,W-120,5);
-  c.textAlign='center';c.fillStyle='#FFF3C9';c.font='bold 46px AmiriW';c.fillText('من المتشابه اللفظي في القرآن الكريم',W/2,135);
-  c.font='bold 30px AmiriW';const bt=TN[g.t],bw=c.measureText(bt).width+50;
-  c.fillStyle={A:'#0B5D4B',B:'#1F4E8C',C:'#B3261E'}[g.t];c.beginPath();c.roundRect(W/2-bw/2,200,bw,46,23);c.fill();c.fillStyle='#fff';c.fillText(bt,W/2,233);
+  c.textAlign='center';c.fillStyle='#FFF3C9';c.font='bold 46px AmiriW';c.fillText(S.top,W/2,135);
+  c.font='bold 30px AmiriW';const bw=c.measureText(S.badge).width+50;
+  c.fillStyle=S.bc;c.beginPath();c.roundRect(W/2-bw/2,200,bw,46,23);c.fill();c.fillStyle='#fff';c.fillText(S.badge,W/2,233);
   c.textAlign='right';let y=250,x0=110,cw=W-220;
   for(const l of Ls){
     if(l.type=='lines'){drawLines(c,l.L,l.font,x0,y+l.lh*.78,l.lh,l.align,cw);y+=l.h;continue}
+    if(l.type=='img'){c.drawImage(l.img,x0,y+6,cw,l.ih);c.strokeStyle='#B08D3C';c.lineWidth=2;c.strokeRect(x0,y+6,cw,l.ih);}
     if(l.type=='orn'){c.strokeStyle='#B08D3C';c.lineWidth=2;c.beginPath();c.moveTo(160,y+25);c.lineTo(W/2-40,y+25);c.moveTo(W/2+40,y+25);c.lineTo(W-160,y+25);c.stroke();star(c,W/2,y+25,16,'#B08D3C',true);}
     if(l.type=='lbl'){c.font='bold 32px AmiriW';c.fillStyle=l.c||'#1F4E8C';c.textAlign='right';c.fillText('◆ '+l.t,x0+cw,y+40);}
     if(l.type=='note'){c.font='28px AmiriW';c.fillStyle='#7a5f20';c.textAlign='center';c.fillText(l.t,W/2,y+36);c.textAlign='right';}
     y+=l.h;}
-  // التذييل
   const fy=Hh-60-170;c.fillStyle='#0B5D4B';c.fillRect(60,fy,W-120,170);c.fillStyle='#B08D3C';c.fillRect(60,fy-5,W-120,5);
   c.textAlign='center';c.fillStyle='#FFF3C9';c.font='bold 44px AmiriW';c.fillText('إتحاف الحُفّاظ بمتشابه الألفاظ',W/2,fy+58);
   c.fillStyle='#fff';c.font='30px AmiriW';c.fillText('إعداد: كليب بن أحمد بن ضيف الله الزهراني',W/2,fy+104);
   c.fillStyle='#E9D9A8';c.font='24px AmiriW';c.direction='ltr';c.fillText('kmasskmass-svg.github.io/ithaf-al-huffaz',W/2,fy+146);c.direction='rtl';
   return cv;}
-async function openShare(gi){SG=gi;$('sm').hidden=false;await refreshShare();}
+async function openShare(k,id){SG=shareSpec(k,id);
+  const o=(cb,lab)=>{cb.parentElement.style.display=lab?'':'none';if(lab)cb.parentElement.lastChild.textContent=lab};
+  o($('smt'),SG.o1);o($('smw'),SG.o2);$('sm').hidden=false;await refreshShare();}
 async function refreshShare(){$('smi').src='';const cv=await drawCard(SG,{tm:$('smt').checked,tw:$('smw').checked});
   SB=await new Promise(r=>cv.toBlob(r,'image/png'));$('smi').src=URL.createObjectURL(SB);}
 async function doShare(){if(!SB)return;const f=new File([SB],'ithaf-al-huffaz.png',{type:'image/png'});
-  const g=D.g[SG],p=g.p[0],url=`${SITE}#v=${p[0]}:${p[1]}`;
-  const text=`من المتشابه اللفظي (${TN[g.t]})\nمن كتاب «إتحاف الحُفّاظ بمتشابه الألفاظ»\n${url}`;
+  const text=`${SG.text}\n${SG.url}`;
   if(navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],text})}catch(e){}}
   else doDown();}
 function doDown(){if(!SB)return;const a=document.createElement('a');a.href=URL.createObjectURL(SB);a.download='ithaf-al-huffaz.png';a.click();}
 /* ===== الأزرار والإعدادات ===== */
 function onAct(e){const t=e.target;
   const f=t.closest('.fav');if(f)return toggleFav(+f.dataset.g);
-  const sh=t.closest('.shr');if(sh)return openShare(+sh.dataset.g);
+  const sh=t.closest('.shr');if(sh)return sh.dataset.k?openShare(sh.dataset.k,sh.dataset.id=='g'?-1:+sh.dataset.id):openShare('g',+sh.dataset.g);
   const au=t.closest('.au');if(au)return play(au);
   const l=t.closest('.lb');if(l&&t.closest('main,#pop'))return goV(+l.dataset.s,+l.dataset.a);}
 function applySet(){document.documentElement.style.setProperty('--z',ST.get('z',1));document.documentElement.classList.toggle('dark',ST.get('dark',false));
@@ -751,7 +777,7 @@ function showK(){location.hash='k';if($('kv').innerHTML)return;
   let h=`<div class="kh"><h2>مهارات ضبط المتشابه اللفظي في القرآن الكريم</h2><div class="by">تقديم الدكتور محمد عمر الجنايني، محاضر القراءات العشر</div>
   <div>عرض تدريبي في التعريف بالمتشابه اللفظي ومؤلفاته، وأسباب الخطأ فيه، والقواعد العامة والخاصة لضبطه. اضغط على أي شريحة لتكبيرها، وأدِر الجوال أفقيًّا لتراها أوضح.</div>
   <details class="tocd"><summary>فهرس الشرائح</summary><div class="toc">${KT.map((t,i)=>t&&i&&i<KN-1?`<button class="chip" data-k="${i+1}">${t.replace(/^(.{0,34}).*$/,(m,a)=>a.length<t.length?a+'…':a)}</button>`:'').join('')}</div></details><div class="ref"><b>المرجع:</b> الجنايني، محمد عمر. «مهارات ضبط المتشابه اللفظي في القرآن الكريم» (عرض تقديمي في ٢٦ شريحة). نُقل هنا بنصه وهيئته دون تصرف، والحقوق لصاحبه. <a href="mharat-dabt-al-mutashabih.pdf" target="_blank" rel="noopener">تحميل العرض الأصلي (PDF)</a></div></div>`;
-  for(let i=1;i<=KN;i++){h+=`<div class="sl" id="sl${i}"><div class="st">${KT[i-1]||'&nbsp;'}<span>شريحة ${ar(i)} من ${ar(KN)}</span></div><img loading="lazy" src="${kimg(i)}" alt="${KT[i-1]||'شريحة '+i}" data-k="${i}">`;
+  for(let i=1;i<=KN;i++){h+=`<div class="sl" id="sl${i}"><div class="st">${KT[i-1]||'&nbsp;'}<span>شريحة ${ar(i)} من ${ar(KN)} <button class="ic shr" data-k="k" data-id="${i}" title="مشاركة الشريحة بطاقةً مزخرفة">مشاركة</button></span></div><img loading="lazy" src="${kimg(i)}" alt="${KT[i-1]||'شريحة '+i}" data-k="${i}">`;
     if(KX[i])h+=`<div class="ex"><b>افتح أمثلتها في التطبيق:</b> ${KX[i].map(([s,a])=>`<button class="ic lb" data-s="${s}" data-a="${a}">${D.names[s-1]} ${ar(a)}</button>`).join('')}</div>`;
     h+='</div>';}
   $('kv').innerHTML=h;
@@ -798,7 +824,7 @@ const tqRange=i=>i<0?TQG.p:[TQ[i][1],i+1<TQ.length?TQ[i+1][1]-1:TQEND];
 function tqPages(i){const [a,b]=tqRange(i);return Array.from({length:b-a+1},(_,k)=>a+k);}
 function showT(){location.hash='t';if($('tv').innerHTML)return;
   const eg=E=>E?E.map(([t,L])=>`<div class="eg"><span>مثال: ${t}</span>${L.map(([s,a])=>D.pg[s+':'+a]?`<button class="ic lb" data-s="${s}" data-a="${a}">${D.names[s-1]} ${ar(a)}</button>`:`<span>(${D.names[s-1]} ${ar(a)})</span>`).join('')}</div>`).join(''):'';
-  const blk=(id,num,t,sm,ul,E,i)=>{const [a,b]=tqRange(i);return `<div class="ru" id="ru${id}"><h3><span class="nb">${num}</span>${t}</h3><div class="bd"><div class="sm"><b>خلاصتها:</b> ${sm}</div>${ul?`<ul>${ul.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}${eg(E)}
+  const blk=(id,num,t,sm,ul,E,i)=>{const [a,b]=tqRange(i);return `<div class="ru" id="ru${id}"><h3><span class="nb">${num}</span>${t}<button class="ic shr" data-k="t" data-id="${i<0?'g':i}" style="margin-right:auto" title="مشاركة القاعدة بطاقةً مزخرفة">مشاركة</button></h3><div class="bd"><div class="sm"><b>خلاصتها:</b> ${sm}</div>${ul?`<ul>${ul.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}${eg(E)}
     <button class="btn" data-tq="${i}" style="margin-top:8px">اقرأ القاعدة كاملة بأمثلتها من الكتاب (ص ${ar(a-1)}${b>a?'–'+ar(b-1):''})</button><div class="pgs" hidden></div></div></div>`};
   let h=`<div class="kh"><h2>الضبط بالتقعيد للمتشابه اللفظي في القرآن المجيد</h2><div class="by">تأليف الشيخ فواز بن سعد الحنين · تقريظ المشايخ: محمود بن عمر سكر، ومحمد بن عوض الحرباوي، ومحمود بن محمد راغب</div>
   <div>قواعد لضبط الآيات المتشابهة: ثمانٍ عامة، واثنتان وعشرون خاصة، كل قاعدة بشرحها وأمثلتها. تحت كل قاعدة خلاصتها، وزرّ يعرض صفحاتها من الكتاب كاملة.</div>
@@ -840,7 +866,7 @@ function initFabs(){$('fshare').onclick=openShareApp;$('fcont').onclick=openCont
   $('sht').onclick=e=>{if(e.target.id=='sht'||e.target.closest('[data-x]'))$('sht').hidden=true};
   document.addEventListener('keydown',e=>{if(e.key=='Escape')$('sht').hidden=true});}
 /* ===== التحديث التلقائي ===== */
-const BUILD='2026-11-23.7'; // يطابق v في version.json
+const BUILD='2026-11-26.1'; // يطابق v في version.json
 async function hardUpdate(){try{const ks=await caches.keys();await Promise.all(ks.filter(k=>k!='ithaf-books').map(k=>caches.delete(k)));
   const r=await navigator.serviceWorker?.getRegistration();if(r)await r.update();}catch(e){}
   location.replace(location.pathname+'?u='+Date.now()+location.hash);}
